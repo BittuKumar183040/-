@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=La+Belle+Aurore&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    cursor: none !important;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(229deg, #636363, #202020);
+    /* background-size: 400% 400%; */
+    animation: backgroundAni 40s linear infinite alternate;
+    background-image: url(./Extras/red.png);
+    overflow: hidden;
+}
+
+@keyframes backgroundAni {
+    0% {
+        background-position: 0% 0%
+    }
+    50% {
+        background-position: 10% 5%
+    }
+    100% {
+        background-position: 0% 0%
+    }
+}
+
+#riple {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .5;
+    mix-blend-mode: lighten;
+    pointer-events: none;
+    transition: .05s;
+    animation: ripleEffect .2s infinite ease;
+}
+
+#riple::before {
+    content: '';
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: red;
+}
+
+.nav_bar * {
+    font-family: Iceland;
+}
+
+.nav_bar {
+    background-color: #000;
+    border: 1px solid white;
+    border-top: none;
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.9);
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 100px;
+    animation: navbar .2s 1 ease-in 2s forwards;
+}
+
+
+/* nav bar title style */
+
+.nav_bar .navTitle p {
+    color: red;
+    font-size: 3em;
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+
+.nav_bar .navTitle p:nth-child(1) {
+    color: #fff;
+    position: absolute;
+    top: -2px;
+    left: 152px;
+    z-index: 1;
+}
+
+.nav_bar .navTitle p:nth-child(2) {
+    color: #fff;
+    position: absolute;
+    top: -4px;
+    left: 154px;
+    z-index: 2;
+}
+
+.nav_bar .navTitle p:nth-child(3) {
+    color: #fff;
+    position: absolute;
+    top: -6px;
+    left: 156px;
+    z-index: 3;
+}
+
+
+/* ****************** */
+
+.nav_bar .menus {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menus div {
+    height: 45px;
+}
+
+.nav_bar .menus p {
+    padding: 5px 30px;
+    margin: 5px 0px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #fff;
+    transition: .5s;
+}
+
+.nav_bar .menus p:hover {
+    color: red;
+}
+
+.nav_bar .menus svg {
+    position: relative;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 25px;
+    display: none;
+}
+
+
+/* @media only screen and (max-width:600px){
+
+} */
+
+
+/* =========================== */
+
+.headline {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+}
+
+.headline div * {
+    display: inline-block;
+    visibility: hidden;
+    user-select: none;
+}
+
+.bounce {
+    font-size: 4em;
+    /* font-family: 'La Belle Aurore', cursive; */
+    font-family: 'Iceland', cursive;
+    cursor: default;
+}
+
+.colored {
+    color: #ff0000;
+    font-size: 4.5em;
+    text-shadow: -4px 0px 1px #fff;
+}
+
+.subheadline {
+    color: #fff;
+    font-size: 1em;
+    opacity: 0;
+    margin: 15px 0px;
+    letter-spacing: 5px;
+    font-family: 'La Belle Aurore', cursive;
+    text-shadow: 0px 0px 0px white;
+    animation: subheading 2s infinite 2s alternate ease-in-out;
+}
+
+@keyframes subheading {
+    to {
+        opacity: .6;
+        text-shadow: 0px 0px 5px white;
+    }
+}
