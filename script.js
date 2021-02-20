@@ -44,3 +44,8 @@ window.addEventListener('mouseout', ()=>{
 window.addEventListener('click',()=>{
     riple.style.opacity=1;
 })
+
+// tab version menu icon color change
+// const menuIcons=document.getElementsByTagName('svg');
+// const menuPaths=document.getElementsByTagName('path');
+

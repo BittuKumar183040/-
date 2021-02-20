@@ -1,0 +1,23 @@
+@media only screen and (max-width:650px){
+    
+    .nav_bar {
+        
+        position: absolute;
+        left:0px;
+        height: 100vh;
+        width: 50px;
+        padding-left: 10px;
+    }
+    .nav_bar .navTitle{
+        display: none;
+    }
+    .nav_bar .menus {
+        flex-direction: column-reverse;
+    }
+    .nav_bar .menus p{
+        display: none;
+    }
+    .headline{
+        font-size: .7em;
+    }
+}

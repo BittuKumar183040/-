@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=La+Belle+Aurore&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+:root {
+    --navTitleLeft: 100px;
+}
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     cursor: none !important;
+    user-select: none;
 }
 
 a:link,
@@ -66,13 +71,13 @@ body {
 
 .nav_bar {
     background-color: #000;
-    border: 1px solid white;
-    border-top: none;
+    border-bottom: 1px solid white;
+    /* border-top: none; */
     box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.9);
-    border-radius: 0 0 10px 10px;
+    /* border-radius: 0 0 10px 10px; */
     display: flex;
     justify-content: space-between;
-    margin: 0px 100px;
+    /* margin: 0px 100px; */
     animation: navbar .2s 1 ease-in 2s forwards;
 }
 
@@ -80,35 +85,33 @@ body {
 /* nav bar title style */
 
 .nav_bar .navTitle p {
-    color: red;
+    color: white;
     font-size: 3em;
     position: absolute;
-    top: 0px;
-    left: 150px;
+    left: var(--navTitleLeft);
 }
 
 .nav_bar .navTitle p:nth-child(1) {
-    color: #fff;
-    position: absolute;
-    top: -2px;
-    left: 152px;
+    color: red;
     z-index: 1;
 }
 
 .nav_bar .navTitle p:nth-child(2) {
-    color: #fff;
-    position: absolute;
-    top: -4px;
-    left: 154px;
     z-index: 2;
+    left: calc(var(--navTitleLeft) + 2px);
+    top: -1px;
 }
 
 .nav_bar .navTitle p:nth-child(3) {
-    color: #fff;
-    position: absolute;
-    top: -6px;
-    left: 156px;
     z-index: 3;
+    left: calc(var(--navTitleLeft) + 4px);
+    top: -2px;
+}
+
+.nav_bar .navTitle p:nth-child(4) {
+    z-index: 4;
+    left: calc(var(--navTitleLeft) + 6px);
+    top: -3px;
 }
 
 
@@ -146,10 +149,9 @@ body {
     display: none;
 }
 
-
-/* @media only screen and (max-width:600px){
-
-} */
+.nav_bar .menus svg path{
+    stroke:white;
+}
 
 
 /* =========================== */
@@ -198,3 +200,10 @@ body {
         text-shadow: 0px 0px 5px white;
     }
 }
+
+
+/* Button  */
+
+.contact {}
+
+.contactBtn {}
