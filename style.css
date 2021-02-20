@@ -124,6 +124,7 @@ body {
 
 .menus div {
     height: 45px;
+    
 }
 
 .nav_bar .menus p {
@@ -136,6 +137,10 @@ body {
 }
 
 .nav_bar .menus p:hover {
+    color: red;
+}
+/* active data  */
+.nav_bar .menus #active p {
     color: red;
 }
 

@@ -2,22 +2,19 @@
     .nav_bar .menus svg {
        display: block;
        transition: .2s;
-       
     }
-    /* Brand name 'RED' */
 
-    .nav_bar .navTitle{
-        
-        /* display: none; */
+    /* icon active data  */
+    .menus #active svg{
+        transform: scale(1.5) translateX(-5px);
+        fill:rgb(252, 70, 70);
     }
+
     /* menu hover */
 
     .nav_bar .menus svg:hover{
         transform: scale(1.5) translateX(-5px);
     }
-
-
-
     .menus p{
         color:transparent !important;
     }
