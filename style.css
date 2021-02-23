@@ -8,6 +8,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color:#fff;
     cursor: none !important;
     user-select: none;
 }
@@ -198,17 +199,9 @@ body {
     text-shadow: 0px 0px 0px white;
     animation: subheading 2s infinite 2s alternate ease-in-out;
 }
-
 @keyframes subheading {
     to {
         opacity: .6;
         text-shadow: 0px 0px 5px white;
     }
 }
-
-
-/* Button  */
-
-.contact {}
-
-.contactBtn {}

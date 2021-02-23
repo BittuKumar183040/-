@@ -1,0 +1,147 @@
+
+:root{
+    --borderColor:3px solid red;
+    --myPicSize:150px;
+    --fontSize:26px;
+    --cRadius:30px;
+    --subFont:18px;
+    --leftWidth:35px;
+
+    --rSideWidth:800px;
+}
+/* body{
+    overflow:visible !important;
+} */
+.cC{
+    display: flex;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.cLContainer, .cRContainer{
+    border:var(--borderColor);
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(4px);
+    border-radius: var(--cRadius);
+    margin: 10px;
+    padding-bottom:15px;
+    font-family: 'Iceland', cursive;
+}
+.myPic{
+    width:var(--myPicSize);height:var(--myPicSize);
+    background: rgba(255,255,255,0.1);
+    margin: 20px var(--leftWidth);
+    overflow: hidden;
+    border-radius: 50%;
+    border:var(--borderColor);
+}
+.myPic img{
+    width: var(--myPicSize);
+}
+.cLContainer .myName{
+   font-size: var(--fontSize);
+    letter-spacing: 20px;
+    margin-right: -20px;
+    text-align: center;
+}
+.cLContainer .myProf{
+    font-size:var(--subFont);
+    opacity: .5;
+    text-align: center;
+}
+.cLContainer .props{
+    margin-top: 10px;
+}
+.cLContainer .props div{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0px;
+    background: red;
+}
+.cLContainer .props div p{
+    padding-left: 10px;
+    
+}
+/* right panel
+----------------- */
+.cRContainer{
+    width: var(--rSideWidth);
+}
+.cRContainer .righttop{
+    background: white;
+    border-radius: calc(var(--cRadius) - 3px) calc(var(--cRadius) - 3px) 0px 0px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px 30px;
+}
+.cRContainer .righttop .topic{
+    color:red;
+    font-size: 26px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+}
+.cRContainer .righttop .topicId{
+    color:black;
+    opacity: .8;
+}
+.cRContainer .rContant{
+    padding:30px 45px;
+}
+.rContant .rContentHeading{
+    font-size: var(--fontSize);
+}
+.rContant .rContentSubheading{
+    font-size: var(--subFont);
+    opacity: .5;
+}
+
+input:focus, textarea{outline: none;}
+input::placeholder,textarea::placeholder{color:red;font-size: 10px;}
+
+.rContant .rInputBoxes{
+    display: flex;
+    justify-content: space-between;
+}
+.rContant .rInputBoxes .rInputBoxesLeft{
+    display: flex;
+    flex-direction: column;
+    margin-right:20px;
+}
+
+.rContant .rInputBoxes .rInputBoxesLeft input,
+.rContant .rInputBoxes .rInputBoxesRight textarea
+{
+    padding:10px 10px;
+    letter-spacing: 3px;
+    color:red;
+    font-size: 13px;
+    border-radius: 5px;
+    margin: 20px 0px 0px 0px;
+    border:none;
+    
+}
+.rContant .rInputBoxes .rInputBoxesLeft input{
+    width:calc(var(--rSideWidth) - 400px);
+}
+.rContant .rInputBoxes .rInputBoxesRight textarea{
+    resize: none;
+    height: calc(100% - 20px);
+}
+.rContant .SubmitButton{
+    float: right;
+}
+.rContant .SubmitButton input{
+    background: red;
+    border: 1px solid #fff;
+    font-size: var(--fontSize);
+    color: #fff;
+    margin-top:30px ;
+    padding:10px 40px;
+    border-radius: 5px;
+    font-family: 'Iceland', cursive;
+}
