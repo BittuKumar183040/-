@@ -9,7 +9,7 @@
     padding: 0px;
     box-sizing: border-box;
     color:#fff;
-    cursor: none !important;
+    /* cursor: none !important; */
     user-select: none;
 }
 
@@ -24,6 +24,7 @@ body {
     animation: backgroundAni 40s linear infinite alternate;
     background-image: url(./Extras/red.png);
     overflow: hidden;
+   
 }
 
 @keyframes backgroundAni {
@@ -80,6 +81,7 @@ body {
     justify-content: space-between;
     /* margin: 0px 100px; */
     animation: navbar .2s 1 ease-in 2s forwards;
+    
 }
 
 

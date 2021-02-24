@@ -5,9 +5,6 @@
     --fontSize:26px;
     --cRadius:30px;
     --subFont:18px;
-    --leftWidth:35px;
-
-    --rSideWidth:800px;
 }
 /* body{
     overflow:visible !important;
@@ -18,8 +15,12 @@
     left:50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    
 }
+/* .cLContainer{
 
+    display: none;
+} */
 
 .cLContainer, .cRContainer{
     border:var(--borderColor);
@@ -33,24 +34,30 @@
 .myPic{
     width:var(--myPicSize);height:var(--myPicSize);
     background: rgba(255,255,255,0.1);
-    margin: 20px var(--leftWidth);
+    margin: 20px 0px;
     overflow: hidden;
     border-radius: 50%;
     border:var(--borderColor);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .myPic img{
     width: var(--myPicSize);
 }
 .cLContainer .myName{
    font-size: var(--fontSize);
-    letter-spacing: 20px;
-    margin-right: -20px;
+    letter-spacing: 8px;
+    margin-left: 8px;
+    padding: 0px 5px;
     text-align: center;
+    color:#fff;
 }
 .cLContainer .myProf{
     font-size:var(--subFont);
     opacity: .5;
     text-align: center;
+    color:#fff;
 }
 .cLContainer .props{
     margin-top: 10px;
@@ -64,13 +71,13 @@
 }
 .cLContainer .props div p{
     padding-left: 10px;
+    color:#fff;
+
     
 }
 /* right panel
 ----------------- */
-.cRContainer{
-    width: var(--rSideWidth);
-}
+
 .cRContainer .righttop{
     background: white;
     border-radius: calc(var(--cRadius) - 3px) calc(var(--cRadius) - 3px) 0px 0px ;
@@ -78,6 +85,7 @@
     align-items: center;
     justify-content: space-between;
     padding:20px 30px;
+    
 }
 .cRContainer .righttop .topic{
     color:red;
