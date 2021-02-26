@@ -1,4 +1,7 @@
 @media only screen and (max-width:900px){
+    :root{
+        --rightSection:auto !important;
+    }
     .nav_bar .menus svg {
        display: block;
        transition: .2s;
@@ -30,6 +33,10 @@
         transform: none;
         padding: 50px;
         width: 100%;
+    }
+    
+    div.cRContainer{
+        width: auto;
     }
     .cRContainer .rContant .rInputBoxes{
         display: flex;

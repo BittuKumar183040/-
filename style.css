@@ -80,6 +80,7 @@ body {
     display: flex;
     justify-content: space-between;
     /* margin: 0px 100px; */
+    z-index: 1 !important;
     animation: navbar .2s 1 ease-in 2s forwards;
     
 }
@@ -127,7 +128,6 @@ body {
 
 .menus div {
     height: 45px;
-    
 }
 
 .nav_bar .menus p {

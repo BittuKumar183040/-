@@ -1,16 +1,25 @@
 @media only screen and (max-width:650px){
-    
+    :root{
+        --rightSection:auto !important;
+    }
     .nav_bar {
-        
         position: fixed;
         left:0px;
+        top:0px;
         height: 100vh;
         width: 50px;
-        padding-left: 10px;
-        z-index: -1;
+
     }
     .nav_bar .navTitle{
         display: none;
+    }
+    .nav_bar div.menus svg{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .nav_bar div.menus svg:hover{
+        top: 50%;
+        transform: translate(1px, -50%) scale(1.5) rotate(360deg);
     }
     .nav_bar .menus {
         flex-direction: column;
@@ -21,7 +30,22 @@
     .headline{
         font-size: .7em;
     }
+    /* for contact page
+    ---------------- */
+    section.cC{
+        /* margin-left: 5%; */
+        width: calc(100% + 10%);
+    }
+    div.cRContainer div.righttop p.topic{
+        font-size: calc(var(--fontSize) - 5px);
+        letter-spacing: 1px;
+    }
+    div.cRContainer div.righttop p.topicID{
+        font-size: calc(var(--subFont) - 5px);
+        letter-spacing: 1px;
+    }
 }
+/* for index page when goes out of the frame */
 @media only screen and (max-height:500px){
     
     .headline{
