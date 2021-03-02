@@ -74,17 +74,12 @@ body {
 .nav_bar {
     background-color: #000;
     border-bottom: 1px solid white;
-    /* border-top: none; */
     box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.9);
-    /* border-radius: 0 0 10px 10px; */
     display: flex;
     justify-content: space-between;
-    /* margin: 0px 100px; */
     z-index: 1 !important;
     animation: navbar .2s 1 ease-in 2s forwards;
-    
 }
-
 
 /* nav bar title style */
 
@@ -134,9 +129,11 @@ body {
     padding: 5px 30px;
     margin: 5px 0px;
     cursor: pointer;
-    font-size: 1.5em;
+    font-size: 15px;
+    letter-spacing: 3px;
     color: #fff;
     transition: .5s;
+    font-family: 'La Belle Aurore', cursive;
 }
 
 .nav_bar .menus p:hover {
@@ -169,7 +166,7 @@ body {
     position: absolute;
     top: 50%;
     left: 100px;
-    transform: translateY(-50%);
+    transform: translateY(-70%);
 }
 
 .headline div * {
@@ -205,5 +202,216 @@ body {
     to {
         opacity: .6;
         text-shadow: 0px 0px 5px white;
+    }
+}
+/* Bottom section of home page */
+.botSection{
+    width: 100%;
+    height: 0px;
+    box-shadow: 0 0 1rem 0 rgb(0, 0, 0); 
+    position: absolute;
+    bottom:-20px;
+    left:0px;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    padding:10px;
+    display: flex;
+    justify-content: space-around;
+    
+    /* align-items: center; */
+}
+
+
+.botSection::before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(2px);
+    margin: -20px;
+}
+
+.botSection div p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: 'La Belle Aurore', cursive;
+}
+.botSection div ol{
+    padding:5px 0px;
+    font-family: Iceland;
+    letter-spacing: 2px;
+}
+.botSection div ol li{
+    list-style: none;
+    font-size: 12px;
+}
+.botSection div ol li{
+    list-style: none;
+}
+.botSection div ol li div{
+    width: 100%;
+    height:2px;
+    background-color: red;
+    margin:5px 0px;
+}
+.botSection div ol li div::before{
+    content:"";
+    background-color: rgb(99, 99, 99);
+    position: absolute;
+    height: 2px;
+    width: 200px;
+    z-index: -1;
+}
+
+.botSection div .contactBtn:active{
+    box-shadow: 0 0 1px red;
+}
+.botSection div.otherPlaces div
+{
+    margin: 5px 0px;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.botSection div.otherPlaces div img{
+    filter: invert();
+    transition: all .2s;
+}
+.botSection div.otherPlaces div img:active{
+    transform: scale(1.2)
+}
+
+/* contact Button at the end */
+
+.botSection div .contactBtn{
+    text-align: center;
+    padding: 5px 0px;
+    border: 1px solid white;
+    margin: 15px 0px;
+    float: right;
+    width:110px;
+    
+    letter-spacing: 5px;
+    color: #fff;
+    font-family: 'Iceland', cursive;
+    font-weight:bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition:all 0.5s;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+}
+.botSection div .contactBtn:hover{
+    background-color: #fff;
+    color: rgb(255, 0, 0);
+    box-shadow: 0 0 5px red;
+}
+.botSection div .contactBtn::after{
+    content:'';
+    position: absolute;
+    left:110px;
+    top: 0px;
+    
+    width:300%;
+    height:100%;
+    border-radius: 5px;
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0.8), rgba(255, 206, 134, 0.8));
+}
+.botSection div .contactBtn:hover::after{
+    animation: btn 1s infinite alternate linear;
+}
+@keyframes btn{
+    from{
+        left:0px;
+    }
+    to{
+        left:-200px;
+    }
+    
+}
+
+
+
+/* *****************---*************
+Extra object  */
+
+.triangle *{
+    height: 50px;
+    width:150%;
+    left:-10px;
+    position: absolute;
+    background-color: rgb(255, 0, 0);
+    z-index: -4;
+    opacity: 0.05;
+    filter: blur(10);
+}
+div.triangle .a{
+    transform:skew(5deg, 170deg);
+}
+div.triangle .b{
+    top:40%;
+    height: 80px;
+    opacity:0.1;
+    transform:skew(5deg, 170deg);
+}
+
+
+
+/* 
+Animation data Area */
+
+/* bottom section animation */
+
+
+/* animaiton delay variable */
+:root{
+    --firstAni:3s;
+}
+
+
+.botSection{
+    animation: bottom .5s 1 var(--firstAni) forwards ease;
+}
+@keyframes bottom{
+    to{
+        height:150px;
+        bottom:0px;
+    }
+}
+/* bottom share icon animation */
+.otherPlaces div *:nth-child(1){
+    animation: icons .5s 1 calc(var(--firstAni) + 0.2s) ease;
+}
+.otherPlaces div *:nth-child(2){
+    animation: icons .7s 1 calc(var(--firstAni) + 0.4s) ease;
+}
+.otherPlaces div *:nth-child(3){
+    animation: icons .9s 1 calc(var(--firstAni) + 0.6s) ease;
+}
+.otherPlaces div *:nth-child(4){
+    animation: icons 1.1s 1 calc(var(--firstAni) + 0.8s) ease;
+}
+
+@keyframes icons {
+    from{
+        opacity: 0;
+        transform:scale(2);
+    }
+}
+
+.contactBtn{
+    animation: contactBtnC 1.1s 1 calc(var(--firstAni) + 1.1s) forwards ease;
+}
+@keyframes contactBtnC {
+    to{
+        opacity: 1;
+        /* transform:scale(2); */
     }
 }
