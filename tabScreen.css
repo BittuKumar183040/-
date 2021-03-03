@@ -13,6 +13,22 @@
         fill:rgb(252, 70, 70);
     }
 
+    /* bottom section of homepage */
+    div.botSection{
+        flex-direction: column;        
+    }
+    .botSection{
+        animation: bottom .5s 1 var(--firstAni) forwards ease;
+    }
+    @keyframes bottom{
+        to{
+            height:250px;
+            bottom:0px;
+        }
+    }
+    .botSection div .contactBtn{
+        margin:5px 0px;
+    }
     /* menu hover */
 
     .nav_bar .menus svg:hover{
@@ -25,7 +41,7 @@
     /* contact style */
 
     body{
-        overflow:scroll;
+        overflow-y:scroll;
     }
     section.cC{
         display: block;
@@ -54,4 +70,5 @@
         float: none;
         text-align: center;
     }
+    
 }

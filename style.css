@@ -22,9 +22,10 @@ body {
     background: linear-gradient(229deg, #636363, #202020);
     /* background-size: 400% 400%; */
     animation: backgroundAni 40s linear infinite alternate;
-    background-image: url(./Extras/red.png);
+    background-image: url(./Extras/red.png); 
+}
+body.indexBody{
     overflow: hidden;
-   
 }
 
 @keyframes backgroundAni {
@@ -218,7 +219,7 @@ body {
     padding:10px;
     display: flex;
     justify-content: space-around;
-    
+    z-index: -1;
     /* align-items: center; */
 }
 
@@ -235,7 +236,21 @@ body {
     filter: blur(2px);
     margin: -20px;
 }
+.botSectionLeft, .botSectionRight{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+/* Bar seperator */
+.botSection .horiBar{
+    /* background-image: linear-gradient(to top, red, green, yellow); */
+    background-color:rgb(0, 0, 0);
+    height:100%;
+    width: 2px;
+    box-shadow: 0px 0px 2px  rgb(255, 255, 255);
+    /* mix-blend-mode:overlay; */
 
+}
 .botSection div p {
     font-size: 15px;
     letter-spacing: 1px;
@@ -295,7 +310,6 @@ body {
     margin: 15px 0px;
     float: right;
     width:110px;
-    
     letter-spacing: 5px;
     color: #fff;
     font-family: 'Iceland', cursive;
