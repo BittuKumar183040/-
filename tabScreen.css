@@ -13,6 +13,15 @@
         fill:rgb(252, 70, 70);
     }
 
+    /* menu hover */
+
+    .nav_bar .menus svg:hover{
+        transform: scale(1.5) translateX(-5px);
+    }
+    .menus p{
+        color:transparent !important;
+    }
+
     /* bottom section of homepage */
     div.botSection{
         flex-direction: column;        
@@ -29,14 +38,7 @@
     .botSection div .contactBtn{
         margin:5px 0px;
     }
-    /* menu hover */
-
-    .nav_bar .menus svg:hover{
-        transform: scale(1.5) translateX(-5px);
-    }
-    .menus p{
-        color:transparent !important;
-    }
+    
 
     /* contact style */
 

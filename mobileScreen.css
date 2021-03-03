@@ -6,7 +6,7 @@
         position: fixed;
         left:0px;
         top:0px;
-        height: 100vh;
+        height: 100%;
         width: 50px;
     }
     .nav_bar .navTitle{
