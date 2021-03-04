@@ -24,7 +24,7 @@ body {
     animation: backgroundAni 40s linear infinite alternate;
     background-image: url(./Extras/red.png); 
 }
-body.indexBody{
+.indexBody{
     overflow: hidden;
 }
 

@@ -2,43 +2,30 @@
     :root{
         --rightSection:auto !important;
     }
-    .nav_bar {
-        position: fixed;
-        left:0px;
-        top:0px;
-        height: 100%;
-        width: 50px;
-    }
-    .nav_bar .navTitle{
+    
+    .nav_bar div.navTitle{
         display: none;
     }
-    .nav_bar div.menus svg{
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .nav_bar div.menus svg:hover{
-        top: 50%;
-        transform: translate(1px, -50%) scale(1.5) rotate(360deg);
-    }
-    .nav_bar .menus {
-        flex-direction: column;
-    }
-    .nav_bar .menus p{
-        display: none;
+    .nav_bar div.menus{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        
     }
     .headline{
         font-size: .7em;
     }
-    /* home btootem section */
-    div.botSection{
-        padding-left:45px;
+    /* home text section */
+    
+    div.headline{
+        left:30px;  
     }
+    
+
+
     /* for contact page
     ---------------- */
-    section.cC{
-        /* margin-left: 5%; */
-        width: calc(100% + 10%);
-    }
+  
     div.cRContainer div.righttop p.topic{
         font-size: calc(var(--fontSize) - 5px);
         letter-spacing: 1px;
@@ -46,6 +33,9 @@
     div.cRContainer div.righttop p.topicID{
         font-size: calc(var(--subFont) - 5px);
         letter-spacing: 1px;
+    }
+    div.cRContainer .rContant div.SubmitButton{
+        transform: scale(0.6);
     }
 }
 /* for index page when goes out of the frame */
