@@ -7,12 +7,6 @@
        transition: .2s;
     }
 
-    /* icon active data  */
-    .menus #active svg{
-        transform: scale(1.5) translateX(-5px);
-        fill:rgb(252, 70, 70);
-    }
-
     /* menu hover */
 
     .nav_bar .menus svg:hover{
@@ -24,29 +18,14 @@
 
     /* bottom section of homepage */
     div.botSection{
-        flex-direction: column;        
+        /* display: none; */
+    
+        padding:3px;
+        transform: scale(0.9);
+        flex-direction: column;
+        height: fit-content;
     }
-    .botSection{
-        animation: bottom .5s 1 var(--firstAni) forwards ease;
-    }
-    @keyframes bottom{
-        to{
-            height:250px;
-            bottom:0px;
-        }
-    }
-    .botSection div .contactBtn{
-        margin:5px 0px;
-    }
-    .botSection div.horiBar{
-        width:100%;
-        height:1px;
-        margin:0px 0px 5px 0px;
-        opacity:.5
-    } 
-    .botSectionRight #contact{
-        transform: translateX(-10px);
-    }
+   
 
     /* contact style */
 

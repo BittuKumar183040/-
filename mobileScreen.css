@@ -14,14 +14,21 @@
     }
     .headline{
         font-size: .7em;
+        left:30px;
+        top:250px;
     }
     /* home text section */
     
-    div.headline{
-        left:30px;  
-    }
-    
 
+    div.botSection{
+        overflow-y: scroll;
+        transform: scale(1);
+    }
+    div.botSectionLeft{
+        flex-direction: column;
+        align-items: center;
+        
+    }
 
     /* for contact page
     ---------------- */
