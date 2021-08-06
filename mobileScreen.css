@@ -21,6 +21,7 @@
     
 
     div.botSection{
+        overflow-y: scroll;
         transform: scale(1);
     }
     div.botSectionLeft{
