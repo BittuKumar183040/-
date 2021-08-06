@@ -1,9 +1,6 @@
 let ani = document.querySelectorAll('.bounce');
 // const backgroundReact=document.querySelector('body');
 
-
-
-
 let aniAct='animate__animated';
 let aniIntrence='animate__jackInTheBox'
 let aniIntrenceSpeed='animate__slow';
@@ -26,6 +23,10 @@ const textAni = () =>{
     
 }
 textAni();
+
+const contact = () =>{
+    console.log("hallo");
+}
 
 
 

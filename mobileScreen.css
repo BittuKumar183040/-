@@ -4,7 +4,7 @@
     }
     
     .nav_bar div.navTitle{
-        display: none;
+        display:none;
     }
     .nav_bar div.menus{
         width: 100%;
@@ -12,6 +12,7 @@
         justify-content: space-around;
         
     }
+    
     .headline{
         font-size: .7em;
         left:30px;
@@ -21,7 +22,7 @@
     
 
     div.botSection{
-        overflow-y: scroll;
+        overflow-y: hidden;
         transform: scale(1);
     }
     div.botSectionLeft{

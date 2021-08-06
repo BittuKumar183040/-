@@ -10,7 +10,8 @@
     /* menu hover */
 
     .nav_bar .menus svg:hover{
-        transform: scale(1.5) translateX(-5px);
+        cursor: pointer;
+        transform: scale(1.2) translateX(-10px);
     }
     .menus p{
         color:transparent !important;
