@@ -73,17 +73,19 @@ body {
     position: absolute;
     left:50%;
     top:50%;
-    transform: translate(-50%,-50%);
-    font-size: 80vw;
-    opacity: 0.2;
+    transform: translate(-50%,-50%) rotate(5deg) ;
+    font-size: 70vw;
+    opacity: 0;
     font-family: 'Iceland', cursive;
-    text-shadow: 25px 25px 0px white;
+    text-shadow: 0px 0px 0px rgb(255, 255, 255);
     color:rgb(255, 0, 0);
-    animation: backchar 5s infinite alternate ease-in;
+    animation: backchar 5s 1 alternate 2s ease-out;
+    animation-fill-mode: forwards;
 }
 @keyframes backchar {
     to{
-        text-shadow: 0px 0px 0px rgb(255, 255, 255);
+        text-shadow: 25px 25px 0px white;
+        opacity:0.15;
     }
 }
 
