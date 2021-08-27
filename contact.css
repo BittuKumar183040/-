@@ -14,13 +14,15 @@ body nav.nav_bar{
     background-color: var(--navColor);
     box-shadow:0px 3px 3px rgba(0, 0, 0,0.2);
 }
+.cright{
 
+}
 .cC{
     text-align: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    /* background-color: red; */
     padding: 30px;
 }
 .cC .cLogo
@@ -50,9 +52,15 @@ body nav.nav_bar{
     font-size: 16px;
     color: var(--navColor);
     margin: 11px 0px;
+    opacity: 0.9;
+    transition: border 0.2s, box-shadow 0.2s;
 }
 .cC .cData input:hover{
     border: 2px solid var(--navColor);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0,0.3);
+}
+.cC .cData input:valid{
+    color: #000;
 }
 .cC .cData .cNumber{
     display: flex;
@@ -64,45 +72,51 @@ body nav.nav_bar{
     border-radius: 5px 0px 0px 5px;
     border-right-style: hidden;
 }
-.cC .cData .cNumber .cNumber{
+.cC .cData .cNumber .cNum{
     padding-left:5px;
     border-radius: 0px 5px 5px 0px;
     width:calc(var(--boxwidth) - 60px);
 }
 .cC .cData .cSubmit{
     background-color: red;
-    color: rgb(255, 255, 255);
     padding: 0;
     margin-top: 20px;
+    color:#fff !important;
+    cursor: pointer;
+    transition: background-color 0.1s;
+}
+.cC .cData .cSubmit:active{
+    background-color: var(--navColor);
 }
 .cC .cOther{
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
     width: var(--boxwidth);
+    opacity: 0.6;
 }
 .cC .cOther div *{
-    filter: opacity(0.6);
+    filter:drop-shadow(1px 1px 1px #000000);
     cursor: pointer;
 }
 
-#riple2{
+
+
+
+/* background style  */
+#riple2, #riple3{
     width: 150%;
-    height: 350px;
-    background-color: #d2c1b0;
+    height: 400px;
     position: absolute;
-    top:-150px;
+    background-color: #d2c1b0;
     z-index: -1;
     transform: rotate(25deg);
 }
+#riple2{
+    top:-150px;
+}
 
 #riple3{
-    width: 150%;
-    height: 450px;
-    background-color: #d2c1b0;
-    position: absolute;
     bottom:-300px;
     left: -350px;
-    z-index: -1;
-    transform: rotate(25deg);
 }
