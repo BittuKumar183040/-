@@ -30,6 +30,15 @@
         height: fit-content;
     }
     div.horiBar{display: none;}
-   
 
-    /* contact style */
+    /* contact Page */
+    section.cleft{
+        left: 50px;
+        top:40%;
+    }
+    div.cright{
+        right: 50px;
+    }
+}
+
+

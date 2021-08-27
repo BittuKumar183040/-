@@ -33,17 +33,12 @@
 
     /* for contact page
     ---------------- */
-  
-    div.cRContainer div.righttop p.topic{
-        font-size: calc(var(--fontSize) - 5px);
-        letter-spacing: 1px;
+    section.cleft{
+        display: none;
     }
-    div.cRContainer div.righttop p.topicID{
-        font-size: calc(var(--subFont) - 5px);
-        letter-spacing: 1px;
-    }
-    div.cRContainer .rContant div.SubmitButton{
-        transform: scale(0.6);
+    div.cright{
+        position: static;
+        transform: translateY(0%);
     }
 }
 /* for index page when goes out of the frame */
