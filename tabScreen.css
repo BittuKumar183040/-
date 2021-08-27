@@ -2,6 +2,9 @@
     :root{
         --rightSection:auto !important;
     }
+    .nav_bar .navTitle p{
+        display: none;
+    }
     .nav_bar .menus svg {
        display: block;
        transition: .2s;

@@ -85,3 +85,24 @@ body nav.nav_bar{
     filter: opacity(0.6);
     cursor: pointer;
 }
+
+#riple2{
+    width: 150%;
+    height: 350px;
+    background-color: #d2c1b0;
+    position: absolute;
+    top:-150px;
+    z-index: -1;
+    transform: rotate(25deg);
+}
+
+#riple3{
+    width: 150%;
+    height: 450px;
+    background-color: #d2c1b0;
+    position: absolute;
+    bottom:-300px;
+    left: -350px;
+    z-index: -1;
+    transform: rotate(25deg);
+}
