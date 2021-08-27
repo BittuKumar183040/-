@@ -30,33 +30,3 @@
    
 
     /* contact style */
-
-    section.cC{
-        display: block;
-        top:0px;left: 0px;
-        transform: none;
-        padding: 50px;
-        width: 100%;
-    }
-    
-    div.cRContainer{
-        width: auto;
-    }
-    .cRContainer .rContant .rInputBoxes{
-        display: flex;
-        flex-direction: column;
-        /* justify-content: space-between; */
-    }
-    .rContant .rInputBoxes .rInputBoxesLeft{
-        margin-right:0px !important;
-    }
-    .rContant .rInputBoxes .rInputBoxesRight textarea{
-        width: 100%;
-        height:150px !important;
-    }
-    .rContant div.SubmitButton{
-        float: none;
-        text-align: center;
-    }
-    
-}

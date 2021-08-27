@@ -1,0 +1,44 @@
+<svg width="247" height="247" viewBox="0 0 247 247" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="B2" clip-path="url(#clip0)">
+<g id="Ellipse 1" filter="url(#filter0_iii)">
+<circle cx="124" cy="118" r="96" fill="#FD5656"/>
+</g>
+<g id="Main">
+<path id="B" d="M119.8 190.2H87.8V50.2H112.2C129.8 50.2 143.067 53.4667 152 60C160.933 66.4 165.4 75.4667 165.4 87.2C165.4 100.533 159.8 110.333 148.6 116.6C164.867 122.733 173 134.267 173 151.2C173 163.2 168.6 172.733 159.8 179.8C151 186.733 137.667 190.2 119.8 190.2ZM119.8 184.2C126.067 184.2 131.8 183.733 137 182.8C142.2 181.733 147.133 180.067 151.8 177.8C156.6 175.4 160.333 171.933 163 167.4C165.667 162.867 167 157.467 167 151.2C167 136.933 160.133 127.267 146.4 122.2L134.4 117.8L145.6 111.4C154.8 106.333 159.4 98.2667 159.4 87.2C159.4 66.5333 143.667 56.2 112.2 56.2H93.8V184.2H119.8Z" fill="white"/>
+<g id="MidK">
+<path id="k" d="M102 179V63H108V179H102ZM176 179L114.4 117.8L169.6 63H178.2L123 117.8L184.6 179H176Z" fill="white"/>
+<g id="BittuOutline">
+<path id="Rectangle 10" d="M112.442 115.766L176.042 179.006L171.993 178.993L110.43 117.789L112.442 115.766Z" fill="#FD5656"/>
+<path id="Rectangle 11" d="M124.913 115.902L188.403 179.033L184.359 179.024L122.901 117.925L124.913 115.902Z" fill="#FD5656"/>
+<path id="Rectangle 8" d="M122.996 117.836L178.184 63.0071L182 63L125.007 119.86L122.996 117.836Z" fill="#FD5656"/>
+<path id="Rectangle 9" d="M112 116.193L165.5 63L169.598 62.9916L114.011 118.217L112 116.193Z" fill="#FD5656"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_iii" x="27" y="21" width="193" height="193" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="5" dy="3"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.216667 0 0 0 0 0.216667 0 0 0 0 0.216667 0 0 0 0.6 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect2_innerShadow"/>
+<feOffset dx="-4" dy="-3"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.279167 0 0 0 0 0.279167 0 0 0 0 0.279167 0 0 0 0.6 0"/>
+<feBlend mode="normal" in2="effect1_innerShadow" result="effect2_innerShadow"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="50" dy="48"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.225 0 0 0 0 0.225 0 0 0 0 0.225 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect2_innerShadow" result="effect3_innerShadow"/>
+</filter>
+<clipPath id="clip0">
+<rect width="247" height="247" fill="white"/>
+</clipPath>
+</defs>
+</svg>

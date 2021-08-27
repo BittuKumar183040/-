@@ -1,155 +1,87 @@
 
 :root{
-    --borderColor:3px solid red;
-    --myPicSize:150px;
+    --navColor:#555555;
+    --borderColor:rgba(0,0,0,0.5);
+    --socialIcon:150px;
     --fontSize:26px;
-    --cRadius:30px;
-    --subFont:18px;
-    --rightSection:60%;
+    --cRadius:5px;
+    --subFont:16px;
+    --boxheight:45px;
+    --boxwidth:250px;
 }
-/* body{
-    overflow:visible !important;
-} */
+
+body nav.nav_bar{
+    background-color: var(--navColor);
+    box-shadow:0px 3px 3px rgba(0, 0, 0,0.2);
+}
+
 .cC{
-    display: flex;
-    justify-content: space-around;
-    z-index: -1;
-    margin-top:3s0px;
-}
-
-
-.cLContainer, .cRContainer{
-    border:var(--borderColor);
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(4px);
-    border-radius: var(--cRadius);
-    margin: 10px;
-    padding-bottom:15px;
-    font-family: 'Iceland', cursive;
-}
-.myPic{
-    width:var(--myPicSize);height:var(--myPicSize);
-    background: rgba(255,255,255,0.1);
-    margin: 20px 0px;
-    overflow: hidden;
-    border-radius: 50%;
-    border:var(--borderColor);
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.myPic img{
-    width: var(--myPicSize);
-}
-.cLContainer .myName{
-   font-size: var(--fontSize);
-    letter-spacing: 8px;
-    margin-left: 8px;
-    padding: 0px 5px;
     text-align: center;
-    color:#fff;
-}
-.cLContainer .myProf{
-    font-size:var(--subFont);
-    opacity: .5;
-    text-align: center;
-    color:#fff;
-}
-.cLContainer .props{
-    margin-top: 10px;
-}
-.cLContainer .props div{
-    display: flex;
     align-items: center;
-    padding: 10px;
-    margin: 10px 0px;
-    background: red;
-}
-.cLContainer .props div p{
-    padding-left: 10px;
-    color:#fff;
-
-    
-}
-/* right panel
------------------ */
-
-.cRContainer .righttop{
-    background: white;
-    border-radius: calc(var(--cRadius) - 3px) calc(var(--cRadius) - 3px) 0px 0px ;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:20px 30px;
-    
-    
-}
-.cRContainer .righttop .topic{
-    color:red;
-    font-size: 26px;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-}
-.cRContainer .righttop .topicId{
-    color:black;
-    opacity: .8;
-}
-.cRContainer .rContant{
-    padding:30px 45px;
-}
-.rContant .rContentHeading{
-    font-size: var(--fontSize);
-}
-.rContant .rContentSubheading{
-    font-size: var(--subFont);
-    opacity: .5;
-}
-
-input:focus, textarea{outline: none;}
-input::placeholder,textarea::placeholder{color:red;font-size: 10px;}
-
-.rContant .rInputBoxes{
-    display: flex;
-    justify-content: space-between;
-}
-.rContant .rInputBoxes .rInputBoxesLeft{
     display: flex;
     flex-direction: column;
-    margin-right:20px;
-    width: var(--rightSection);
+    width: 100%;
+    padding: 30px;
 }
-/* increasing textbox size as respect o textbox */
-.cRContainer{
-    width: var(--rightSection);
-}
-
-.rContant .rInputBoxes .rInputBoxesLeft input,
-.rContant .rInputBoxes .rInputBoxesRight textarea
+.cC .cLogo
 {
-    padding:10px 10px;
-    letter-spacing: 3px;
-    color:red;
-    font-size: 13px;
+    width: 80px;
+    height: 80px;
+}
+.cC .cContact{
+    font-family: var(--font);
+    color: var(--navColor);
+    font-size: 26px;
+    padding:10px 0px;
+}
+.cC .cData{
+    display: flex;
+    flex-direction: column;
+}
+.cC .cData input
+{
+    font-family: var(--font);
+    border: 2px solid var(--borderColor);
     border-radius: 5px;
-    margin: 20px 0px 0px 0px;
-    border:none;
+    height:var(--boxheight);
+    width: var(--boxwidth);
+    padding-left:18px;
+    padding-right:5px;
+    font-size: 16px;
+    color: var(--navColor);
+    margin: 11px 0px;
+}
+.cC .cData input:hover{
+    border: 2px solid var(--navColor);
+}
+.cC .cData .cNumber{
+    display: flex;
     
+    justify-content:center;
 }
-
-.rContant .rInputBoxes .rInputBoxesRight textarea{
-    resize: none;
-    height: calc(100% - 20px);
+.cC .cData .cNumber .cCode{
+    width:60px;
+    border-radius: 5px 0px 0px 5px;
+    border-right-style: hidden;
 }
-.rContant .SubmitButton{
-    float: right;
+.cC .cData .cNumber .cNumber{
+    padding-left:5px;
+    border-radius: 0px 5px 5px 0px;
+    width:calc(var(--boxwidth) - 60px);
 }
-.rContant .SubmitButton input{
-    background: red;
-    border: 1px solid #fff;
-    font-size: var(--fontSize);
-    color: #fff;
-    margin-top:30px ;
-    padding:10px 40px;
-    border-radius: 5px;
-    font-family: 'Iceland', cursive;
+.cC .cData .cSubmit{
+    background-color: red;
+    color: rgb(255, 255, 255);
+    padding: 0;
+    margin-top: 20px;
+}
+.cC .cOther{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: var(--boxwidth);
+}
+.cC .cOther div *{
+    filter: opacity(0.6);
+    cursor: pointer;
 }
