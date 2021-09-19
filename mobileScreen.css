@@ -36,6 +36,11 @@
     section.cleft{
         display: none;
     }
+    section.cC{
+        background-color: rgba(107, 107, 107,0.2);
+        height: 80%;
+        margin:25px;
+    }
     div.cright{
         position: static;
         transform: translateY(0%);

@@ -51,6 +51,10 @@ body nav.nav_bar{
 {
     width: 80px;
     height: 80px;
+    border-radius: 30%;
+    background-color: rgba(255, 255, 255,1);
+    box-shadow: 2px 2px 5px var(--borderColor);
+    border: 2px solid var(--borderColor);
 }
 .cC .cContact{
     font-family: var(--font);
@@ -76,14 +80,13 @@ body nav.nav_bar{
     margin: 11px 0px;
     opacity: 0.9;
     transition: border 0.2s, box-shadow 0.2s;
+    caret-color: red;
 }
-.cC .cData input:hover{
+.cC .cData input:hover,.cC .cData input:active{
     border: 2px solid var(--navColor);
     box-shadow: 2px 2px 3px rgba(0, 0, 0,0.3);
 }
-.cC .cData input:valid{
-    color: #000;
-}
+
 .cC .cData .cNumber{
     display: flex;
     

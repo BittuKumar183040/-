@@ -3,6 +3,7 @@
     <title>Contact</title>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
     <link rel="stylesheet" href="tabScreen.css">
     <link rel="stylesheet" href="mobileScreen.css">
     <link rel="Stylesheet" href="contact.css">
@@ -12,15 +13,15 @@
     <nav class="nav_bar">
         <div class="navTitle" onClick="window.open('https://github.com/BittuKumar183040/-');">
             <!-- <img src="/Extras/myLogo.svg" alt="B2"/> -->
-            <img src="/Extras/B2(gray).png" alt="B2"/>
+            <img src="/Extras/logo.png" alt="B2"/>
             <p>Bittu Kumar</p>
         </div>
         <div class="menus">
             <a class="menuItems" href="index.html">
                 <p>Home</p>
-                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.6667 10.6667H53.3334C56.2667 10.6667 58.6667 13.0667 58.6667 16V48C58.6667 50.9333 56.2667 53.3333 53.3334 53.3333H10.6667C7.73337 53.3333 5.33337 50.9333 5.33337 48V16C5.33337 13.0667 7.73337 10.6667 10.6667 10.6667Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M58.6667 16L32 34.6667L5.33337 16" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                    <path d="M3.14493 9.33331L12.1449 2.33331L21.1449 9.33331V20.3333C21.1449 20.8637 20.9342 21.3725 20.5591 21.7475C20.1841 22.1226 19.6754 22.3333 19.1449 22.3333H5.14493C4.61449 22.3333 4.10579 22.1226 3.73071 21.7475C3.35564 21.3725 3.14493 20.8637 3.14493 20.3333V9.33331Z" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.14493 22.3333V12.3333H15.1449V22.3333" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </a>
             <a class="menuItems" href="#">
@@ -48,7 +49,7 @@
     </section>
     <div class="cright">
         <section class="cC">
-            <img class="cLogo" src="Extras/B2(gray).png" alt="B2">
+            <img class="cLogo" src="Extras/logo.png" alt="B2">
             <p class="cContact">Contact me</p>
             <form class="cData" action="#" method="GET">
                 <input class="cName" type="text" placeholder="Name">
@@ -92,5 +93,8 @@
             </section>
         </section>
     </div>
+
+<div id="loader" class="center"></div>
+<script src="loader.js"></script>
 </body>
 </html>
