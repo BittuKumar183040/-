@@ -24,10 +24,17 @@
     div.botSection{
         overflow-y: hidden;
         transform: scale(1);
+        
     }
     div.botSectionLeft{
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        
+        /* align-items: center; */
+    }
+    div.botSectionLeft div ol{transform: scaleX(0.8);}
+    div.botSectionLeft div p{font-size: 12px;text-align: center;}
+    div.botSectionRight{
+        /* display: none; */
         
     }
 
@@ -37,7 +44,10 @@
         display: none;
     }
     section.cC{
-        background-color: rgba(107, 107, 107,0.2);
+        background-color: rgba(238, 238, 238, 0.5);
+        backdrop-filter: blur(2px);
+        border: 2px solid rgba(255, 255, 255,0.8);
+        border-radius: 15px;
         height: 80%;
         margin:25px;
     }
