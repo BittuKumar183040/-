@@ -4,11 +4,13 @@
     --body-content:18px;
     --caption:16px;
 }
-
+body{
+    overflow-y:scroll !important;
+}
 
 body nav.nav_bar{
-    background-color:#ffffff00;
-    box-shadow:0px 3px 3px rgba(0, 0, 0, 0);
+    background-color:rgba(0, 0, 0, 0.179);
+    box-shadow:0px 3px 3px rgba(0, 0, 0, 0.4);
 }
 body.indexBody{
 background: #FFAFBD;  
@@ -37,9 +39,7 @@ nav.nav_bar{
 .blog-Area{
     margin: 20px 5%;
 }
-.blog-heading{
-    
-}
+
 .blog-heading p:first-child{
     font-size: var(--heading-text);
     letter-spacing: 5px;
@@ -57,7 +57,6 @@ nav.nav_bar{
     /* background-color: azure; */
     display: flex;
     justify-content: left;
-    
 }
 .blog-big-left{
     box-shadow: 2px 2px 5px rgba(0, 0, 0,0.5);
@@ -69,7 +68,7 @@ nav.nav_bar{
     animation: bb 15s alternate infinite 2s ease-in-out;
     animation-fill-mode: both;
     height: 300px;
-    width: 500px;
+    min-width: 500px;
     margin-right: 50px;
     position: relative;
     z-index: 1;
@@ -181,3 +180,88 @@ nav.nav_bar{
     justify-content: left;
     align-items: center;
 }
+.blog-content-lists{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+.blog-container-sm{
+    position: relative;
+    width: 250px;
+    height:300px;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid white;
+    margin: 5px;
+    transition: 0.2s box-shadow;
+}
+.blog-container-sm img{
+    height: 100%;
+    transition: transform 0.5s;
+}
+.blog-container-sm .blog-container-sm-content{
+    position: absolute;
+    z-index: 1;
+    left:0px;
+    bottom: 0px;
+    opacity: 0.6;
+    pointer-events: none;
+    width:100%;
+    background-color: rgba(206, 206, 206, 0.3);
+    backdrop-filter: blur(5px);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding:20px;
+    transition: bottom 0.2s, opacity 0.5s;
+}
+.blog-container-sm-content p:first-child{
+    font-size: var(--body-text);
+    padding-bottom: 10px;
+}
+.blog-container-sm-content p:not(:first-child){
+    color:rgba(255, 255, 255, 0.6);
+    font-size: var(--caption);
+    text-align: justify;
+}
+.blog-container-sm:hover,.blog-container-sm:hover .blog-container-sm-content
+{
+    box-shadow: 0px 0px 5px white;
+    bottom: 5px;
+    opacity: 1;
+}
+.blog-container-sm img:hover{
+    transform: scale(1.04);
+}
+
+
+/* active style class */
+
+.active-style{
+    /* display: none; */
+    position: relative;
+    overflow: hidden;
+    
+}
+.active-style::after{
+    content: '';
+    position: absolute;
+    height:130%;
+    width: 20px;
+    top:0;
+    left:-60px;
+    opacity: 0.2;
+    transform: rotate(340deg);
+    background-image: linear-gradient(90deg, rgba(0,0,0,0), rgba(255, 255, 255, 0.7),rgba(0,0,0,0));
+    z-index: 5;
+    animation: light 0.5s 1 linear;
+}
+@keyframes light {
+    to{
+        left:130%;
+        top:-50px;
+    }
+    
+}
+
+

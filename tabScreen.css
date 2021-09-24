@@ -39,6 +39,20 @@
     div.cright{
         right: 50px;
     }
+
+
+    /* blog screen styels */
+    /* ************************ */
+    .blog-big-left{
+        /* display: none; */
+        min-width: 300px;
+        margin-right:10px;
+    }
+    .blog-container-sm{
+        max-width: 180px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
 }
 
 
