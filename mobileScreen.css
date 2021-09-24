@@ -93,9 +93,9 @@
     }
 }
 @media only screen and (max-width:400px){
-    div.menus a:nth-child(2){
-        /* display: none; */
-        transform: translateY(-20px);
+    div.menus a:nth-child(2) p{
+        
+        
     }
     .blog-content-lists{
         justify-content: center;

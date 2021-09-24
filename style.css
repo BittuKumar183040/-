@@ -345,8 +345,7 @@ body {
     background-color: #fff;
     color: rgb(255, 0, 0);
     box-shadow: 0 0 5px red;
-}
-.botSection div .contactBtn::after{
+}.botSection div .contactBtn::after{
     content:'';
     position: absolute;
     left:110px;
@@ -382,24 +381,51 @@ div.triangle .b{
     opacity:0.1;
     transform:skew(5deg, 170deg);
 }
-
-
-
-/* 
-Animation data Area */
-
-/* bottom section animation */
-
-
 /* animaiton delay variable */
-:root{
-    --firstAni:3s;
-}
-
-
 .botSection{
     height:150px;
     bottom:0px;
     width: 100%;
 } 
-    
+
+/* downloadable content */
+/* ************************* */
+.resumeDownload{
+    position: absolute;
+    top: 60px;
+    right:10px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius:50px;
+    overflow: hidden;
+    width: 36px;
+    transition: width 0.2s;
+}
+.resumeDownload:hover{
+    width: 80px;
+}
+.resumeDownload div{
+    display: flex;
+    flex-direction:row-reverse;
+    align-items: center;
+    padding:0 5px 0 2px;
+}
+.resumeDownload p{
+    font-family: var(--font);
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    padding-left: 5px;
+}
+.resumeDownload a{
+    position: relative;
+    top:2px;
+    cursor: pointer;
+}
+.resumeDownload img{
+    height:30px;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+}
