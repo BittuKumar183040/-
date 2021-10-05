@@ -52,6 +52,10 @@
         position: static;
         transform: translateY(0%);
     }
+    .resumeDownload{
+        width: 80px;
+        transform: scale(0.8);
+    }
 
         /* blog screen styels */
     /* ************************ */
@@ -93,10 +97,7 @@
     }
 }
 @media only screen and (max-width:400px){
-    div.menus a:nth-child(2) p{
-        
-        
-    }
+  
     .blog-content-lists{
         justify-content: center;
     }

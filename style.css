@@ -108,14 +108,24 @@ body {
 }
 
 .nav_bar {
-    background-color: #000;
-    border-bottom: 1px solid white;
+    background-color:rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    border-bottom: 1px solid rgb(43, 43, 43);
     box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.9);
     display: flex;
     justify-content: space-between;
+    opacity: 0;
+    transform: scale(0.98);
     z-index: 1 !important;
-    animation: navbar .2s 1 ease-in 2s forwards;
+    animation: navbar 0.5s 1 ease-in 0.5s forwards;
 }
+@keyframes navbar {
+    to{
+        transform: scale(1);
+        opacity:1;
+    }
+}
+
 
 /* nav bar title style */
 
@@ -229,23 +239,19 @@ body {
 }
 /* Bottom section of home page */
 .botSection{
-    
+    height:150px;
+    bottom:0px;
+    width: 100%;
     box-shadow: 0 0 1rem 0 rgb(0, 0, 0); 
     position: absolute;
     padding:5px 0px;
     left:0px;
-    bottom: 0px;
     z-index: 1;
     background: inherit;
     overflow: hidden;
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
-    height: 0px;
-    width: 0px;
 }
-
-
 .botSection::before {
     content: "";
     position: absolute;
@@ -269,8 +275,6 @@ body {
     height:100%;
     width: 2px;
     box-shadow: 0px 0px 2px  rgb(255, 255, 255);
-    /* mix-blend-mode:overlay; */
-
 }
 .botSection div p {
     font-size: 15px;
@@ -381,19 +385,12 @@ div.triangle .b{
     opacity:0.1;
     transform:skew(5deg, 170deg);
 }
-/* animaiton delay variable */
-.botSection{
-    height:150px;
-    bottom:0px;
-    width: 100%;
-} 
-
 /* downloadable content */
 /* ************************* */
 .resumeDownload{
     position: absolute;
     top: 60px;
-    right:10px;
+    right:-40px;
     display: flex;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -401,6 +398,12 @@ div.triangle .b{
     overflow: hidden;
     width: 36px;
     transition: width 0.2s;
+    animation: resumeDown 0.5s 1 ease-in 1s forwards;
+}
+@keyframes resumeDown {
+    to{
+        right:20px;
+    }
 }
 .resumeDownload:hover{
     width: 80px;
@@ -428,4 +431,11 @@ div.triangle .b{
     padding: 5px;
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 50%;
+    animation: downloadPic 1s infinite alternate-reverse ease-out;
+}
+@keyframes downloadPic {
+    to{
+       filter:grayscale();
+       transform:scale(1.2);
+    }
 }

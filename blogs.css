@@ -3,19 +3,45 @@
     --body-text:21px;
     --body-content:18px;
     --caption:16px;
+    --background-right:#ffafbc;
 }
+/* scroll -------------*/
+::-webkit-scrollbar {
+    width: 15px;
+    background:var(--background-right);
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-corner{
+      background: red;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(44, 107, 255);
+    border: 2px solid var(--background-right);
+    cursor: pointer;
+    box-shadow: 
+        inset 1px 1px 3px #ffffff,
+        inset -2px -1px 2px #00000067;
+    border-radius: 10px;
+  }
+  /* ========== */
 body{
     overflow-y:scroll !important;
 }
 
 body nav.nav_bar{
-    background-color:rgba(0, 0, 0, 0.179);
+    background-color:rgba(0, 0, 0, 0.2);
     box-shadow:0px 3px 3px rgba(0, 0, 0, 0.4);
 }
 body.indexBody{
-background: #FFAFBD;  
-background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD); 
-background: linear-gradient(to right, #ffc3a0, #FFAFBD);
+background: var(--background-right);  
+background: -webkit-linear-gradient(to right, #ffc3a0, var(--background-right)); 
+background: linear-gradient(to right, #ffc3a0, var(--background-right));
 
 }
 nav.nav_bar{
