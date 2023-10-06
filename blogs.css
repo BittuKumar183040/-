@@ -71,6 +71,7 @@ nav.nav_bar{
     letter-spacing: 5px;
     color: rgb(49, 49, 49);
     font-weight: bold;
+    margin-top: 60px;
 }
 .blog-heading p:last-child{
     font-size: var(--caption);

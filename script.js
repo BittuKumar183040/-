@@ -42,3 +42,21 @@ const glassEffect=(index)=>{
     appliedDiv[idx].classList.add("active-style");
     removeClass(idx);
 }
+
+/*
+
+let start;
+let threshold=30
+document.addEventListener('touchstart',(e)=>{
+   start=e.targetTouches[0].screenX
+})
+document.addEventListener('touchend',(e)=>{
+    end=e.changedTouches[0].screenX
+    if(start-end>threshold){
+        window.open("./3dShowCase/index.html", "_self")
+    }else if(start-end < -threshold){
+        window.open("https://linktr.ee/_Bittu_Kumar_", "_self")
+    }
+})
+
+*/

@@ -1,90 +1,214 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-*{
-    padding: 0;
-    margin: 0;box-sizing: border-box;
-    font-family: 'Nunito', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
-body{
-    background-image: url("./images/blur.jpg");
-    backdrop-filter: blur(5px);
-    background-size: 200% 250%;
-    background-attachment: fixed;
-    animation:back 30s infinite alternate linear;
+body {
+  background-image: url("./images/blur.jpg");
+  backdrop-filter: blur(5px);
+  background-size: 200% 250%;
+  background-attachment: fixed;
+  animation: back 30s infinite alternate linear;
 }
 @keyframes back {
+  from {
+    background-size: 100% 100%;
+    background-position: -50px 40px;
+  }
+}
+.navBar {
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+}
+
+.pageLogo img {
+  height: 2rem;
+  filter: invert();
+  cursor: pointer;
+  margin: 10px;
+}
+/* navbar ends here */
+.corosol {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.showContent {
+  text-align: center;
+  color: #191919;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.showContent img {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.showContent #heading {
+  font-size: 34px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.showContent #heading span {
+  display: block;
+}
+
+.showContent #subHeading {
+  font-size: 21px;
+  color: #191919;
+}
+.mouseScroll {
+    height: 50px;
+    padding: 10px;
+    animation: mouseDown 1s infinite alternate ease-out;
+}
+@keyframes mouseDown {
     from{
-        background-size: 100% 100%;
-        background-position: -50px 40px;
+        transform: translateY(-10px);
     }
 }
-.navBar{
+.mouseScroll img {
+  height:100%;
+  width: 100%;
+}
+
+.tecknology {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  padding: 5px;
+  margin-top: 20px;
+}
+.tecknology a {
+  text-decoration: none;
+  padding: 15px;
+}
+
+/* hero section ends here */
+
+.anotherOne {
+    
+}
+.menu {
+  text-align: center;
+}
+.menu p {
+  letter-spacing: 1px;
+  color: #191919;
+  font-size: 22px;
+  font-weight: bold;
+  position: relative;
+}
+.menu p:first-child{
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    display: inline-block;
+    padding:10px 40px;
+    border-radius: 0 0 10px 10px;
+}
+.menu p:last-child{
+    font-size: 14px;
+    font-weight:normal;
+    margin-bottom: 10px;
+    padding:10px 20%;
+}
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.container div {
+  border-radius: 20px;
+  border: 2px solid #fff2;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  cursor: pointer;
+  height: 25vh;
+  position: relative;
+}
+.container div img {
+  height: 100%;
+  transition: all 0.2s;
+}
+.container div p {
     position: absolute;
-    z-index: 5;
-    left: calc(5% - 10px);
-}
-.pageLogo img{
-    height: 50px;
-    filter: invert();
-    cursor: pointer;
-}
-.show{
-    position: relative;
-}
-.show img{
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
     width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    box-shadow: 0 2px 5px rgba(119, 97, 47, 0.734);
+    text-align: center;
+    padding: 5px 0;
 }
-.show .showContent{
-    position: absolute;
-    top:40%;
-    left: 5%;
-    transform: translateY(-50%);
+.container div:hover > img {
+  transform: scale(1.05);
+  filter: grayscale(70%) ;
 }
-.showContent p{
-    font-size: 2vw;
-    color: #ECC065;
+
+/* primarily for mobile devices */
+@media only screen and (max-width: 650px) {
+    .mypic {
+        width: 30vw;
+        height: 30vw;
+    }
+    .showContent #heading {
+        font-size: 22px;
+    }
+    .showContent #subHeading {
+        font-size: 14px;
+    }
+    .mouseScroll {
+        overflow: hidden;
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        opacity: 0.5;
+        transform: scale(0.95);
+    }
+    .mouseScroll img {
+        transform:scale(5) translateY(-2.5px);
+    }
+
+    /* section second */
+
+    .menu p {
+        font-size: 16px;
+      }
+      .menu p:last-child{
+          font-size: 11px;
+      }
 }
-.showContent p:first-child{
-    font-size: 3vw;
-    font-weight: bold;
-    color: #B1796A;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+/* for index page when goes out of the frame */
+@media only screen and (max-height: 500px) {
 }
-.menu{
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-.menu .blend p{
-    letter-spacing: 1px;
-    color: #B1796A;
-    font-size: 3vw;
-    font-weight: bold;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-    position: relative;
-}
-.blend p::after{
-    content: "";
-    height: 2px;
-    width: 100%;
-    background-color: #ECC065;
-    box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
-    position: absolute;
-    bottom:0px;
-    left: 0px;
-}
-.container div{
-    display: flex;
-}
-.project1,.project2,.project3{
-    display: flex;
-    justify-content: center;
-}
-.project1 img,.project2 img,.project3 img{
-    width: 45%;
-    border-radius: 20px;
-    padding: 3px;
-    margin: 5px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+/* extra small screens */
+@media only screen and (max-width: 400px) {
 }

@@ -8,40 +8,170 @@
     <link rel="icon" href="./images/logo.png" type="image/icon type">
     <title>ShowCase | 3D Modelling</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
 </head>
 <body>
-    <div class="navBar">
+    <nav class="navBar">
         <div class="pageLogo">
             <img src="./images/logo.png" alt="" onclick="window.open('../index.html')">
         </div>
-        
-    </div>
+    </nav>
     <div class="corosol">
-        <div class="show">
-            <img src="./images/background.png" alt="">
+        <div class="Content">
             <div class="showContent">
-                <p>Hey! Welcome</p>
-                <p>Check out my some work on Blender 3D</p>
+                <img src="./images/MeGIF.gif" alt="">
+                <p id="heading">👋 Hello👋<span id="greetings"></span></p>
+                <p id="subHeading">Check out some of my works and projects</p>
+            </div>
+            <div class="mouseScroll">
+                <img src="./images/mouse-cursor.png" alt="🔽">
+            </div>
+        </div>
+        <marquee class="tecknology">
+            <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> 
+            </a> 
+            <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> 
+            </a> 
+            <a href="https://sass-lang.com" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/> 
+            </a> 
+            <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> 
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> 
+            </a>
+            <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> 
+            </a> 
+            <a href="https://www.python.org" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> 
+            </a> 
+            <a href="https://www.figma.com/" target="_blank" rel="noreferrer"> 
+                <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="figma" width="40" height="40"/> 
+            </a>
+            <a href="https://www.photoshop.com/en" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/photoshop/photoshop-line.svg" alt="photoshop" width="40" height="40"/> 
+            </a>
+            <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> 
+            </a> 
+            <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> 
+            </a> 
+            <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> 
+            </a> 
+            <a href="https://nodejs.org" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> 
+            </a>
+            <a href="https://expressjs.com" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> 
+            </a> 
+            <a href="https://www.php.net" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php" width="40" height="40"/> 
+            </a> 
+            <a href="https://postman.com" target="_blank" rel="noreferrer"> 
+                <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="postman" width="40" height="40"/> 
+            </a> 
+            <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> 
+                <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> 
+            </a>
+            <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> 
+                <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> 
+            </a>
+            <a href="https://www.blender.org/" target="_blank" rel="noreferrer"> 
+                <img src="https://download.blender.org/branding/community/blender_community_badge_white.svg" alt="blender" width="40" height="40"/> 
+            </a>
+        </marquee>
+    </div>
+    <div class="anotherOne">
+        <div class="menu">
+            <p>Web Development </p>
+            <p>Following are the projects which is build using latest technology</p>
+        </div>
+        <div class="container">
+            <div>
+                <img src="./images/projects/todophp.png" alt="" onclick="window.open('https://github.com/BittuKumar183040?tab=repositories&q=Todo&type=&language=&sort=');">
+                <p>Todo Application</p>
+            </div>
+            <div>
+                <img src="./images/projects/advice.png" onclick="window.open('https://bittukumar183040.github.io/Advice-Generator/')" alt="">
+                <p>Advice Generator</p>
+            </div>
+            <div>
+                <img src="./images/projects/weathermap.png" onclick="window.open('https://638b730864c021434329c6af--stellular-kringle-4723ec.netlify.app/')"  alt="">
+                <p>Weather Map</p>
+            </div>
+            <div>
+                <img src="./images/projects/tic.png" onclick="window.open('https://b2tictac.netlify.app/')"  alt="">
+                <p>Tic Tac Toe</p>
+            </div>
+            <div>
+                <img src="./images/projects/gameapi.png" onclick="window.open('https://gameapi-o049.onrender.com/')"  alt="">
+                <p>Game Api</p>
             </div>
         </div>
     </div>
-    <div class="menu">
-        <div class="blend">
+
+    <div class="anotherTwo">
+        <div class="tecknology"></div>
+        <div class="menu">
             <p>Blender 3D</p>
+            <p>Following are the rendered image created in blender 3d and rendered using cycle engine</p>
+        </div>
+        <div class="container">
+            <div>
+                <img src="./images/closeup2.png" alt="" onclick="window.open('./images/closeup2.png')">
+                <p>Ball Picker Game</p>
+            </div>
+            <div>
+                <img src="./images/s.png" onclick="window.open('./images/s.png')" alt="">
+                <p>Ball Picker Game_2</p>
+            </div>
+            <div>
+                <img src="./images/bed.jpg" onclick="window.open('./images/bed.jpg')"  alt="">
+                <p>Interior 1.0</p>
+            </div>
+            <div>
+                <img src="./images/interor.jpg" onclick="window.open('./images/interor.jpg')"  alt="">
+                <p>Interior</p>
+            </div>
+            <div>
+                <img src="./images/pc.jpg" onclick="window.open('./images/pc.jpg')" alt="">
+                <p>Cabinet</p>
+            </div>
+            <div>
+                <img src="./images/hammer.jpg" onclick="window.open('./images/hammer.jpg')" alt="">
+                <p>Hammer</p>
+            </div>
         </div>
     </div>
-    <div class="container">
-        <div class="project1">
-            <img src="./images/closeup2.png" alt="" onclick="window.open('./images/closeup2.png')">
-            <img src="./images/s.png" onclick="window.open('./images/s.png')" alt="">
+    <div class="anotherThree">
+        <div class="tecknology"></div>
+        <div class="menu">
+            <p>UI/UX</p>
+            <p>These UI were created by using figma</p>
         </div>
-        <div class="project2">
-            <img src="./images/interor.jpg" onclick="window.open('./images/interor.jpg')"  alt="">
-            <img src="./images/bed.jpg" onclick="window.open('./images/bed.jpg')"  alt="">
-        </div>
-        <div class="project3">
-            <img src="./images/pc.jpg" onclick="window.open('./images/pc.jpg')" alt="">
-            <img src="./images/hammer.jpg" onclick="window.open('./images/hammer.jpg')" alt="">
+        <div class="container">
+            <div>
+                <img src="./images/UI/price.png" alt="" onclick="window.open('https://www.figma.com/file/guIlHYhh2ShfFn9rily7nv/Price-List?type=design&mode=design&t=EMcgOUwlfGkqkelq-1')">
+                <p>Price List</p>
+            </div>
+            <div>
+                <img src="./images/UI/video.png" onclick="window.open('https://www.figma.com/proto/IGrSpopqO10LxPvDsgrYKr/LEP?type=design&node-id=122-22&t=8FIPIwqHMm6fyvRx-1&scaling=contain&page-id=0%3A1&starting-point-node-id=1%3A2&mode=design')" alt="">
+                <p>Conferencing</p>
+            </div>
+            <div>
+                <img src="./images/UI/TE-min.png" onclick="window.open('https://www.figma.com/file/WiKP7F2IIKYihSCNCx0nmh/Untitled?type=design&mode=design&t=EMcgOUwlfGkqkelq-1')"  alt="">
+                <p>Business Card</p>
+            </div>
+            <div>
+                <img src="./images/UI/pizza.png" onclick="window.open('https://www.figma.com/file/oBvIbvmS7sym4oV3fQMQO4/Pizza?type=design&mode=design&t=EMcgOUwlfGkqkelq-1')"  alt="">
+                <p>Meal | Hero Page</p>
+            </div>
         </div>
     </div>
 </body>

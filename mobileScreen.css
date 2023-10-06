@@ -24,14 +24,12 @@
     div.botSection{
         overflow-y: hidden;
         transform: scale(1);
-        
+        bottom: 50px;
     }
     div.botSectionLeft{
         flex-direction: row;
-        
-        /* align-items: center; */
     }
-    div.botSectionLeft div ol{transform: scaleX(0.8);}
+    div.botSectionLeft div ol{transform: scaleX(0.8) translateX(-10px)}
     div.botSectionLeft div p{font-size: 12px;text-align: center;}
 
 
@@ -50,13 +48,15 @@
     }
     div.cright{
         position: static;
-        transform: translateY(0%);
+        transform: translateY(10%);
     }
     .resumeDownload{
         width: 80px;
         transform: scale(0.8);
     }
-
+    #logoBack{
+        font-size: 100vw;
+    }
         /* blog screen styels */
     /* ************************ */
     .blog-Area{

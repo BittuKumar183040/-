@@ -32,27 +32,8 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
-body {
-    background: linear-gradient(229deg, #636363, #202020);
-    /* background-size: 400% 400%; */
-    animation: backgroundAni 40s linear infinite alternate;
-    background-image: url(./Extras/red.png); 
-}
-.indexBody{
+body{
     overflow: hidden;
-}
-
-@keyframes backgroundAni {
-    0% {
-        background-position: 0% 0%
-    }
-    50% {
-        background-position: 10% 5%
-    }
-    100% {
-        background-position: 0% 0%
-    }
 }
 
 #riple {
@@ -90,6 +71,7 @@ body {
     transform: translate(-50%,-50%) rotate(5deg) ;
     font-size: 70vw;
     opacity: 0;
+    z-index: 5;
     font-family: 'Iceland', cursive;
     text-shadow: 0px 0px 0px rgb(255, 255, 255);
     color:rgb(255, 0, 0);
@@ -103,20 +85,19 @@ body {
     }
 }
 
-.nav_bar * {
-    font-family: Iceland;
-}
+
 
 .nav_bar {
-    background-color:rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2px);
-    border-bottom: 1px solid rgb(43, 43, 43);
-    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.9);
+    box-shadow: 0px 0px 10px rgba(255, 26, 26, 0.344);
     display: flex;
+    top: 0px;
     justify-content: space-between;
     opacity: 0;
     transform: scale(0.98);
-    z-index: 1 !important;
+    z-index: 5 !important;
+    position: absolute;
+    width: 100%;
     animation: navbar 0.5s 1 ease-in 0.5s forwards;
 }
 @keyframes navbar {
@@ -124,6 +105,9 @@ body {
         transform: scale(1);
         opacity:1;
     }
+}
+.nav_bar * {
+    font-family: Iceland;
 }
 
 
@@ -135,8 +119,8 @@ body {
     position: absolute;
     left: var(--navTitleLeft);
     cursor: pointer;
-    background-color: #ffffff;
-    border-radius: 30%;
+    background-color: #ffffff00;
+    border-radius: 50%;
     box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
 }
 .nav_bar .navTitle p{
@@ -189,6 +173,33 @@ body {
 .nav_bar .menus svg path{
     stroke:white;
 }
+.mainFrame{
+    position: absolute;
+    left: 0px;
+    width: 0px;
+    width: 100%;
+}
+
+.heroSection{
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(229deg, #636363, #202020);
+    /* background-size: 400% 400%; */
+    animation: backgroundAni 40s linear infinite alternate;
+    background-image: url(./Extras/red.png); 
+}
+
+@keyframes backgroundAni {
+    0% {
+        background-position: 0% 0%
+    }
+    50% {
+        background-position: 10% 5%
+    }
+    100% {
+        background-position: 0% 0%
+    }
+}
 
 
 /* =========================== */
@@ -239,18 +250,17 @@ body {
 }
 /* Bottom section of home page */
 .botSection{
-    height:150px;
-    bottom:0px;
-    width: 100%;
     box-shadow: 0 0 1rem 0 rgb(0, 0, 0); 
-    position: absolute;
-    padding:5px 0px;
-    left:0px;
-    z-index: 1;
     background: inherit;
-    overflow: hidden;
+    position: absolute;
+    left:0px;
+    bottom: 0;
+    padding-top: 10px;
+    height:170px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
+    z-index: 1;
 }
 .botSection::before {
     content: "";
@@ -267,6 +277,8 @@ body {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    backdrop-filter: blur(2px);
+    background-image:linear-gradient(to top, #0000,rgba(255, 0, 0, 0.267) , #fff0);
 }
 /* Bar seperator */
 .botSection .horiBar{
@@ -349,7 +361,8 @@ body {
     background-color: #fff;
     color: rgb(255, 0, 0);
     box-shadow: 0 0 5px red;
-}.botSection div .contactBtn::after{
+}
+.botSection div .contactBtn::after{
     content:'';
     position: absolute;
     left:110px;
@@ -360,20 +373,34 @@ body {
     background-image: linear-gradient(to left, rgba(255, 0, 0, 0.8), rgba(255, 206, 134, 0.8));
 }
 
+/* pageSecond */
+
+.pageSecond{
+    position: relative;
+    background-color: red;
+}
+
 
 
 
 /* *****************---*************
 Extra object  */
-
+div.triangle{
+    display: none;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: red;
+    overflow: hidden;
+}
 .triangle *{
     height: 50px;
-    width:150%;
-    left:-10px;
+    width:100%;
+    left:0;
     position: absolute;
     background-color: rgb(255, 0, 0);
-    z-index: -4;
     opacity: 0.05;
+    z-index: 51;
     filter: blur(10);
 }
 div.triangle .a{
@@ -390,7 +417,7 @@ div.triangle .b{
 .resumeDownload{
     position: absolute;
     top: 60px;
-    right:-40px;
+    right:40px;
     display: flex;
     background-color: rgba(255, 255, 255, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.3);
