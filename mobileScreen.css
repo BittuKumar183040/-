@@ -2,7 +2,9 @@
     :root{
         --rightSection:auto !important;
     }
-    
+    body{
+        overflow-x: hidden;
+    }
     .nav_bar div.navTitle{
         display:none;
     }
@@ -12,11 +14,44 @@
         justify-content: space-around;
         
     }
-    
+    .aboutBody{
+        top: 50%;
+        flex-direction: column-reverse;
+    }
+
+    .aboutPart{
+        width: calc(80% + 20px);
+        padding: 10px;
+    }
+    .aboutLeft div:first-child p{
+        text-align: center;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 2px 2px 0 white,  
+            -2px 2px 0 white,
+            0 5px 5px #0005;
+
+    }
+    .aboutRight{
+        transform: scale(0.8);
+    }
     .headline{
-        font-size: .7em;
+        font-size: 10px;
         left:30px;
         top:250px;
+    }
+    .experience .company{
+        width:calc(50% - 5px);
+    }
+    .experience .company div{
+        width: 80%;
+        margin-left: 20%;
+    }
+    .experience .desc{
+        text-align: left;
+        width:calc(50% - 5px);
+    }
+    .experience .desc div{
+        width: 80%;
     }
     /* home text section */
     
@@ -90,14 +125,13 @@
 }
 /* for index page when goes out of the frame */
 @media only screen and (max-height:500px){
-    
+   
     .headline{
         font-size: .6em;
         transform: translateY(-100px);
     }
 }
 @media only screen and (max-width:400px){
-  
     .blog-content-lists{
         justify-content: center;
     }

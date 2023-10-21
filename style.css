@@ -5,6 +5,10 @@
     --font:'Iceland', cursive;
 }
 
+
+
+
+
 * {
     margin: 0px;
     padding: 0px;
@@ -77,6 +81,7 @@ body{
     color:rgb(255, 0, 0);
     animation: backchar 5s 1 alternate 2s ease-out;
     animation-fill-mode: forwards;
+    pointer-events: none;
 }
 @keyframes backchar {
     to{
@@ -229,7 +234,7 @@ body{
 .colored {
     color: #ff0000;
     font-size: 4.5em;
-    text-shadow: -4px 0px 1px #fff;
+    text-shadow: -2px 0px 1px #fff;
 }
 
 .subheadline {
@@ -373,51 +378,165 @@ body{
     background-image: linear-gradient(to left, rgba(255, 0, 0, 0.8), rgba(255, 206, 134, 0.8));
 }
 
-/* pageSecond */
+/* second page */
+
+.aboutBody{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    left:10px;
+    width:calc(100% - 20px);
+    display: flex;
+    flex-wrap: wrap;
+}
+.experienceHeading *{
+    font-size: 1.2rem;
+}
+.aboutPart p{
+    text-align: justify;
+    font: 1em  'Iceland', cursive;
+}
+.aboutPart{
+    align-items: justify;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 10px 10px 10%;
+    /* box-shadow: 2px 2px 0px black; */
+}
+
+.aboutLeft div:first-child p{
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    position: relative;
+    border-radius: 0 0 10px 0;
+    box-shadow: 2px 2px 0 white;
+    letter-spacing: 2px;
+}
+.aboutLeft div:first-child p::first-letter{
+    font-size: 2em;
+
+}
+.aboutLeft div:first-child p::first-letter::after{
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    height: 10px;
+    width: 100%;
+    background-color: white;
+}
+.aboutRight{
+    display: flex;
+    justify-content: center;
+    transform: scale(1.2);
+}
+.aboutRight img{
+    border-radius: 50%;
+}
+
+/* thireSecond */
 
 .pageSecond{
     position: relative;
-    background-color: rgb(255, 48, 48);
+    background-color: #000;
     height: 100dvh;
+    z-index: 1;
 }
-.pageSecond .headline{
+
+.svgsBottom{
+    position: absolute;
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    margin: 10px;
+    background-color: rgb(255, 48, 48);
+    top: 0;
+    z-index:-1;
+    border-radius: 20px;
+    border: 2px solid white;
+}
+
+.pageSecond .experienceHeading{
     background-color: #202020;
-    padding: 2px 20px 10px;
-    top: 50px;
+    padding: 10px 20px 10px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    position: absolute;
+    top: 40px;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 2px 2px 0px white;
+    font-size: 0.5rem;
 }
 
 .pageSecond .experience{
-    position: absolute;
+    font-family: iceland;
+    position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     display: flex;
     width: 100%;
 }
+.experience{
+    margin-bottom: 40px;
+}
 .experience .company{
-    width:calc(50% - 10px);
+    width:calc(50% - 5px);
 }
 .experience .company div{
     text-align: right;
-    padding-right: 10px;
-}
-.experience .bar{
-    width: 20px;
-    height: 20px;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
+    font-size: 18px;
+    width: 100%;
 }
 .experience .desc{
     text-align: left;
-    width:calc(50% - 10px);
+    width:calc(50% - 5px);
+    font-size: 18px;
 }
+
 .experience .desc div{
-    text-align: left;
-    padding-left: 10px;
+    text-align: justify;
+    width: 50%;
 }
+.desc div div{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.desc div svg{
+    color: white;
+    height: 30px;
+    transform: scale(0.7);
+}
+.experience .bar{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px 10px 0 10px;
+    background-color: #ffffff;
+}
+.bar :first-child{ 
+    position: absolute;
+    height: 200px;
+    width: 2px;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 40%;
+}
+#session{
+    padding: 3px 5px 2px 3px;
+    background-color: #202020;   
+    display:inline-block;
+    text-align: center;
+    box-shadow: 1px 1px 0px white;
+
+}
+
 
 /* *****************---*************
 Extra object  */
@@ -448,6 +567,8 @@ div.triangle .b{
     opacity:0.1;
     transform:skew(5deg, 170deg);
 }
+
+
 /* downloadable content */
 /* ************************* */
 .resumeDownload{
@@ -502,3 +623,7 @@ div.triangle .b{
        transform:scale(1.2);
     }
 }
+
+/* svg at bottom */
+
+
