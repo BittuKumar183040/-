@@ -1,18 +1,10 @@
-// Body cursor effect
+const cursorSmall = document.querySelector('.cursorSmall');
 
-const riple=document.querySelector('#riple');
-riple.style.zIndex=4;
-const mouseRun=()=>{
-    window.addEventListener('mousemove', (event)=>{
-        riple.style.top=event.clientY+"px";
-        riple.style.left=event.clientX+"px";
-        riple.style.opacity=".5";
-    })
-    window.addEventListener('mouseout', ()=>{
-        riple.style.opacity="0";
-    })
+const positionElement = (e)=> {
+  const mouseY = e.clientY;
+  const mouseX = e.clientX;
+  console.log(mouseX, mouseY)
+  cursorSmall.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
 }
 
-// window.addEventListener('click',()=>{
-//     riple.style.opacity=1;
-// })
+window.addEventListener('mousemove', positionElement)

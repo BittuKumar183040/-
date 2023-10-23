@@ -2,8 +2,10 @@
     :root{
         --rightSection:auto !important;
     }
-    body{
-        overflow-x: hidden;
+    html, body {
+        overflow-x: hidden !important;
+        width: 100dvw !important;
+        height: 100dvh !important;
     }
     .nav_bar div.navTitle{
         display:none;
@@ -18,10 +20,17 @@
         top: 50%;
         flex-direction: column-reverse;
     }
-
+    .bounce {
+        font-size: 2.2em;
+    }
+    
+    .colored {
+        font-size: 2.4em;
+    }
     .aboutPart{
-        width: calc(80% + 20px);
+        width: calc(90% + 20px);
         padding: 10px;
+        font-size: 1em;
     }
     .aboutLeft div:first-child p{
         text-align: center;
@@ -43,10 +52,12 @@
         width:calc(50% - 5px);
     }
     .experience .company div{
+        font-size: 1em;
         width: 80%;
         margin-left: 20%;
     }
     .experience .desc{
+        font-size: 1em;
         text-align: left;
         width:calc(50% - 5px);
     }
