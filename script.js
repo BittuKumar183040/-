@@ -25,16 +25,16 @@ const textAni = () =>{
 textAni();
 
 // page scroll event track scroll position
-const buildElement=(DOMElement, parentElement, style)=>{
+const buildElement=(DOMElement, parentElement, className, style)=>{
     const element=document.createElement(DOMElement);
     element.style.cssText=style
+    element.classList.add(className)
     parentElement.appendChild(element)
     return element
 }
-scrollElement=buildElement("div",document.body,`
-        height:3px;
+scrollElement=buildElement("div",document.body, "pageScrollInfo",`
+        height:px;
         width:0%;
-        background:white;
         border-radius:0 5px 5px 0;
         position:fixed;
         top:0;
@@ -46,14 +46,12 @@ const sendToTop=document.querySelector(".toTop")
 sendToTop.addEventListener('click',()=>{
     scrollTo({top:0, behavior:"smooth"})
 })
+let topThreshold=scrollable-document.documentElement.clientHeight
 window.addEventListener("scroll",()=>{
-    if(scrollY>scrollable-document.documentElement.clientHeight){
+    if(scrollY>topThreshold)
         sendToTop.classList.add("toShow")
-    } 
-    else{
+    else
         sendToTop.classList.remove("toShow")
-    }
-    
     scrollElement.style.width=(Math.ceil(scrollY/scrollable*100))+"%";
 })
 

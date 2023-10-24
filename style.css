@@ -3,6 +3,7 @@
 :root {
     --navTitleLeft: 100px;
     --font:'Iceland', cursive;
+    --primary:rgb(255, 48, 48);
 }
 
 ::-webkit-scrollbar {
@@ -16,13 +17,13 @@
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: rgb(255, 48, 48);
+    background: var(--primary);
     border-radius: 10px;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #f00;
+    background: var(--primary)
   }
 
   * {
@@ -52,13 +53,13 @@ a:visited{
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 body{
     scroll-behavior: smooth;
     overflow-x: hidden;
-    animation-iteration-count: infinite;
+    cursor: url(./Extras/cursor/pointer.cur), pointer !important;
 }
 .scrolling{
     transform: scaleX(0.99);
@@ -89,12 +90,12 @@ body{
     z-index: 5;
     font-family: 'Iceland', cursive;
     text-shadow: 0px 0px 0px rgb(255, 255, 255);
-    color:rgb(255, 0, 0);
-    animation: backchar 5s 1 alternate 2s ease-out;
+    color:var(--primary);
+    animation: backChar 5s 1 alternate 2s ease-out;
     animation-fill-mode: forwards;
     pointer-events: none;
 }
-@keyframes backchar {
+@keyframes backChar {
     to{
         text-shadow: 25px 25px 0px white;
         opacity:0.15;
@@ -105,7 +106,7 @@ body{
 
 .nav_bar {
     backdrop-filter: blur(2px);
-    box-shadow: 0px 0px 10px rgba(255, 26, 26, 0.344);
+    box-shadow: 0px 0px 10px rgba(255, 48, 48, 0.4);
     display: flex;
     margin: 0;
     left: 0;
@@ -115,7 +116,7 @@ body{
     z-index: 5 !important;
     position: absolute;
     width: 100%;
-    animation: navbar 0.5s 1 ease-in 0.5s forwards;
+    animation: navbar 0.2s ease-in 0.5s forwards;
 }
 @keyframes navbar {
     to{
@@ -160,6 +161,8 @@ body{
 .menus .menuItems {
     height: 45px;
     z-index: 1;
+    animation: bounce;
+    animation-duration: 1s;
 }
 
 .nav_bar .menus .menuItems p {
@@ -174,7 +177,7 @@ body{
 }
 
 .nav_bar .menus .menuItems p:hover {
-    color: red;
+    color: var(--primary);
 }
 
 .nav_bar .menus svg {
@@ -237,14 +240,11 @@ body{
 
 .bounce {
     font-size: 3em;
-    /* font-family: 'La Belle Aurore', cursive; */
     font-family: 'Iceland', cursive;
-    /* color:blue; */
-    cursor: default;
 }
 
 .colored {
-    color: #ff0000;
+    color: var(--primary);
     font-size: 3.2em;
     text-shadow: -2px 0px 1px #fff;
 }
@@ -267,7 +267,7 @@ body{
 }
 /* Bottom section of home page */
 .botSection{
-    box-shadow: 0 0 50px #f004; 
+    box-shadow: 0 0 50px rgba(255, 48, 48, 0.4); 
     background: inherit;
     position: absolute;
     left:0px;
@@ -295,11 +295,10 @@ body{
     justify-content: space-around;
     width: 100%;
     backdrop-filter: blur(2px);
-    /* background-image:linear-gradient(to top, #0000,rgba(255, 0, 0, 0.267) , #fff0); */
 }
+
 /* Bar seperator */
 .botSection .horiBar{
-    /* background-image: linear-gradient(to top, red, green, yellow); */
     background-color:rgb(0, 0, 0);
     height:100%;
     width: 2px;
@@ -323,7 +322,7 @@ body{
 .botSection div ol li div{
     width: 100%;
     height:2px;
-    background-color: red;
+    background-color: var(--primary);
     margin:5px 0px;
 }
 .botSection div ol li div::before{
@@ -336,7 +335,7 @@ body{
 }
 
 .botSection div .contactBtn:active{
-    box-shadow: 0 0 1px red;
+    box-shadow: 0 0 1px var(--primary);
 }
 .botSection div.otherPlaces div{
     margin: 5px 0px;
@@ -374,8 +373,8 @@ body{
 }
 .botSection div .contactBtn:hover{
     background-color: #fff;
-    color: rgb(255, 0, 0);
-    box-shadow: 0 0 5px red;
+    color: var(--primary);
+    box-shadow: 0 0 5px var(--primary);
 }
 .botSection div .contactBtn::after{
     content:'';
@@ -385,13 +384,11 @@ body{
     width:300%;
     height:100%;
     border-radius: 5px;
-    background-image: linear-gradient(to left, rgba(255, 0, 0, 0.8), rgba(255, 206, 134, 0.8));
+    background-image: linear-gradient(to left, rgba(255, 48, 48, 0.4), rgba(255, 206, 134, 0.8));
 }
 
 /* second page */
-.about{
-    cursor: url(./Extras/cursor/pointer.cur), pointer;
-}
+
 .aboutBody{
     position: relative;
     top: 50%;
@@ -414,13 +411,7 @@ body{
     mix-blend-mode: difference;
     z-index: 15;
 } */
-.experienceHeading{
-    cursor: url(./Extras/cursor/alternate.cur), pointer;
-}
-.experienceHeading *{
-    font-size: 1.2rem;
-    cursor: url(./Extras/cursor/alternate.cur), pointer;
-}
+
 .aboutPart p{
     text-align: justify;
     font: 1em  'Iceland', cursive;
@@ -467,6 +458,7 @@ body{
     left: 0;top: 0;
     height: 100%;
     width: 2px;
+    z-index: 999;
 }
 .aboutRight img{
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -474,10 +466,11 @@ body{
     border-radius: 50%;
     transform: scale(1);
     cursor: none;
-    transition: all 0.2s;
+    transition: all 0.5s ease-in;
 }
 .aboutRight img:hover{
     border:4px double rgba(0, 0, 0, 1);
+    box-shadow:0 0 1440px 1440px rgba(0, 0, 0, 0.9), 0 0 30px 20px red;
 }
 .social_icon{
     display: flex;
@@ -488,7 +481,7 @@ body{
 }
 .social_icon *{
     opacity: 0.8;
-    border: 1px solid black;
+    border: 1px solid #000;
     border-radius: 10px 0;
     transition: all 0.2;
     padding: 2px;
@@ -512,8 +505,8 @@ body{
     height: calc(100% - 20px);
     width: calc(100% - 20px);
     margin: 10px;
-    background: #e52d27;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
+    background: var(--primary);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #b31217, var(--primary));  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     top: 0;
@@ -522,14 +515,20 @@ body{
     border: 2px solid white;
 }
 .about .svgsBottom{
-    background: #e52d27;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #b31217, #e52d27);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: var(--primary);  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #b31217, var(--primary));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #b31217, var(--primary)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 /* ---------------------------------- */
+.experienceHeading{
+    cursor: url(./Extras/cursor/alternate.cur), pointer;
+}
+.experienceHeading *{
+    font-size: 1.8rem;
+    cursor: url(./Extras/cursor/alternate.cur), pointer;
+}
 .pageSecond .experienceHeading{
-    background-color: #202020;
     padding: 10px 20px 10px;
     display: flex;
     justify-content: center;
@@ -537,10 +536,33 @@ body{
     position: absolute;
     top:8px;
     left: 50%;
-    border-radius: 10px 0;
+    border-radius:0 0 10px 10px;
     transform: translateX(-50%);
-    box-shadow: 2px 2px 0px white, -2px 2px 0 white;
+    box-shadow: 2px 2px 0px white, -2px 2px 0 white, 5px 5px 5px #0003;
+    background-color: #000;
     font-size: 0.5rem;
+}
+.pageSecond .experienceHeading::before{
+    content: "";
+    position: absolute;
+    top:0px;
+    left:-20px;
+    height: 20px;
+    width: 20px;
+    border-radius:0 0 0 10px;
+    box-shadow: -2px 2px 0 white, 4px 0 0 black, 0px 0px 2px #0002;
+    background-color: #000;
+}
+.pageSecond .experienceHeading::after{
+    content: "";
+    position: absolute;
+    top:0px;
+    right:-20px;
+    height: 20px;
+    width: 20px;
+    border-radius:0 0 10px 0;
+    box-shadow: 2px 2px 0 white, -4px 0 0 black, 0px 0px 2px #0003;
+    background-color: #000;
 }
 .experienceContainer{
     height:80%;
@@ -615,7 +637,7 @@ body{
 }
 #session{
     padding: 3px 5px 2px 3px;
-    background-color: #202020;   
+    background-color: #000;   
     display:inline-block;
     text-align: center;
     box-shadow: 1px 1px 0px white;
@@ -630,7 +652,7 @@ div.triangle{
     position: absolute;
     height: 100%;
     width:100%;
-    background-color: red;
+    background-color: var(--primary);
     overflow: hidden;
 }
 .triangle *{
@@ -638,7 +660,7 @@ div.triangle{
     width:100%;
     left:0;
     position: absolute;
-    background-color: rgb(255, 0, 0);
+    background-color: var(--primary);
     opacity: 0.05;
     z-index: 51;
     filter: blur(10);
@@ -763,13 +785,20 @@ div.triangle .b{
     }
 }
 
+.pageScrollInfo{
+    background: #fff;
+    background-image: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,255,0,1) 25%, rgba(0,255,0,1) 50%, rgba(0,255,255,1) 75%, rgba(0,0,255,1) 100%);
+    animation: pulse 1s infinite;
+}
+
+
 /* svg at bottom */
 
 .toTop{
     height:40px;
     width:40px;
     border-radius:50%;
-    background:rgba(132, 7, 7, 0.4);
+    background:rgba(0, 0, 0, 0.4);
     position:fixed;
     bottom:15px;
     right:15px;
@@ -780,6 +809,10 @@ div.triangle .b{
     backdrop-filter:blur(5px);
     cursor:pointer;
     z-index:999;
+}
+.toTopBottom{
+    border-radius:50% 50% 0 0;
+    border-bottom: 2px solid red;
 }
 .toShow{
     display: flex;
