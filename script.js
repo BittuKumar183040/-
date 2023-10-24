@@ -58,28 +58,15 @@ window.addEventListener("scroll",()=>{
 })
 
 
-
-
-
 const contact = () =>{
     console.log("hallo");
 }
-
-
-
 
 // tab version menu icon color change
 // const menuIcons=document.getElementsByTagName('svg');
 // const menuPaths=document.getElementsByTagName('path');
 
 // blogGlass animation adding class
-const appliedDiv=document.querySelectorAll('.blog-container-sm');
-const glassEffect=(index)=>{
-    var idx=parseInt(index);
-    appliedDiv[idx].classList.add("active-style");
-    removeClass(idx);
-}
-
 /*
 screen touch gesture
 

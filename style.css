@@ -38,6 +38,7 @@
     -ms-user-select:none;
     user-select:none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+   
     /* border: 1px solid black; */
 }
 input:focus{
@@ -47,6 +48,7 @@ a:link,
 a:visited{
     text-decoration: none;
     outline: none;
+    cursor:url(./Extras/cursor/link.cur), pointer;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -56,6 +58,14 @@ input::-webkit-inner-spin-button {
 body{
     scroll-behavior: smooth;
     overflow-x: hidden;
+    animation-iteration-count: infinite;
+}
+.scrolling{
+    transform: scaleX(0.99);
+    animation: scroll 0.2s 1 forwards ease-out;
+}
+@keyframes scroll {
+    from{transform: scaleX(1);}
 }
 .cursorSmall{
     position: absolute;
@@ -379,7 +389,9 @@ body{
 }
 
 /* second page */
-
+.about{
+    cursor: url(./Extras/cursor/pointer.cur), pointer;
+}
 .aboutBody{
     position: relative;
     top: 50%;
@@ -389,8 +401,25 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
+/* 
+.aboutCursor{
+    position: absolute;
+    left: 0;top: 0;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width:  20px;
+    background-color: rgb(20, 231, 97);
+    border-radius: 50%;
+    pointer-events: none;
+    mix-blend-mode: difference;
+    z-index: 15;
+} */
+.experienceHeading{
+    cursor: url(./Extras/cursor/alternate.cur), pointer;
+}
 .experienceHeading *{
     font-size: 1.2rem;
+    cursor: url(./Extras/cursor/alternate.cur), pointer;
 }
 .aboutPart p{
     text-align: justify;
@@ -444,6 +473,11 @@ body{
     border:4px solid rgba(255, 255, 255,0);
     border-radius: 50%;
     transform: scale(1);
+    cursor: none;
+    transition: all 0.2s;
+}
+.aboutRight img:hover{
+    border:4px double rgba(0, 0, 0, 1);
 }
 .social_icon{
     display: flex;
@@ -472,19 +506,19 @@ body{
     height: 100dvh;
     z-index: 1;
 }
-
+/* backgound for section 2 and third */
 .svgsBottom{
     position: absolute;
     height: calc(100% - 20px);
     width: calc(100% - 20px);
     margin: 10px;
-    background-color: rgb(255, 48, 48);
+    background-image:linear-gradient(to bottom, #fff0, red);
     top: 0;
     z-index:-1;
     border-radius: 20px;
     border: 2px solid white;
 }
-
+/* ---------------------------------- */
 .pageSecond .experienceHeading{
     background-color: #202020;
     padding: 10px 20px 10px;
@@ -639,6 +673,7 @@ div.triangle .b{
     flex-direction:row-reverse;
     align-items: center;
     padding:0 5px 0 2px;
+    cursor: url(./Extras/cursor/account.cur), default !important;
 }
 .resumeDownload p{
     font-family: var(--font);
@@ -650,7 +685,7 @@ div.triangle .b{
 .resumeDownload a{
     position: relative;
     top:2px;
-    cursor: pointer;
+    cursor: url(./Extras/cursor/account.cur), default !important;
 }
 .resumeDownload img{
     height:30px;
