@@ -33,7 +33,7 @@ const buildElement=(DOMElement, parentElement, className, style)=>{
     return element
 }
 scrollElement=buildElement("div",document.body, "pageScrollInfo",`
-        height:px;
+        height:4px;
         width:0%;
         border-radius:0 5px 5px 0;
         position:fixed;
