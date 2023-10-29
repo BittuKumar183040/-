@@ -26,7 +26,7 @@
     background: var(--primary)
   }
 
-  * {
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -39,7 +39,7 @@
     -ms-user-select:none;
     user-select:none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
-   
+
     /* border: 1px solid black; */
 }
 input:focus{
@@ -78,27 +78,49 @@ body{
     transform: translateX(50px);
     z-index: 5555;
 }
-  
-#logoBack
-{
+.logoBack{
     position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%) rotate(5deg) ;
-    font-size: 70vw;
-    opacity: 0;
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 5;
-    font-family: 'Iceland', cursive;
-    text-shadow: 0px 0px 0px rgb(255, 255, 255);
-    color:var(--primary);
-    animation: backChar 5s 1 alternate 2s ease-out;
-    animation-fill-mode: forwards;
-    pointer-events: none;
 }
-@keyframes backChar {
+.logoBack *
+{
+    position: relative;
+    font-size: 40vw;
+    opacity:0.15;
+    text-wrap: nowrap;
+    font-family: 'Iceland', cursive;
+    text-transform: uppercase;
+    text-shadow: 10px 10px 0px rgb(255, 255, 255);
+    color:var(--primary);
+    pointer-events: none;
+    margin: 0;
+    /* line-height: 24vw; */
+    padding: 0;
+}
+.logoBack marquee:first-child
+{
+    animation: backCharFirst 4s infinite alternate ease-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+.logoBack marquee:last-child
+{
+    animation: backChar2 5s infinite alternate 5s ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes backCharFirst {
     to{
         text-shadow: 25px 25px 0px white;
-        opacity:0.15;
+    }
+}
+@keyframes backChar2 {
+    to{
+        text-shadow: 25px 25px 0px white;
     }
 }
 
@@ -499,6 +521,9 @@ body{
     height: 100dvh;
     z-index: 1;
 }
+.lastSection{
+    border-radius: 0 0 25px 25px;
+}
 /* backgound for section 2 and third */
 .svgsBottom{
     position: absolute;
@@ -506,19 +531,22 @@ body{
     width: calc(100% - 20px);
     margin: 10px;
     background: var(--primary);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #b31217, var(--primary));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #b31217, #e52d27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: -webkit-linear-gradient(to right, #b31217, var(--primary)); 
+    background: linear-gradient(to right, #b31217, #e52d27);
+    background-image: url(./Extras/sectionBG.jpg);
     top: 0;
     z-index:-1;
     border-radius: 20px;
     border: 2px solid white;
+    background-image: url(./Extras/sectionBG.jpg);
+    background-size: cover;
 }
 .about .svgsBottom{
     background: var(--primary);  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #b31217, var(--primary));  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #b31217, var(--primary)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: -webkit-linear-gradient(to left, #b31217, var(--primary));
+    background: linear-gradient(to left, #b31217, var(--primary));
+    background-image: url(./Extras/sectionBG.jpg);
+    background-size: cover;
 }
 /* ---------------------------------- */
 .experienceHeading{
@@ -579,7 +607,6 @@ body{
 }
 .pageSecond .experience{
     font-family: iceland;
-    
     display: flex;
     width: 100%;
 }
@@ -673,6 +700,33 @@ div.triangle .b{
     height: 80px;
     opacity:0.1;
     transform:skew(5deg, 170deg);
+}
+
+/* footer */
+.footer{
+    padding: 5px 0px;
+    font-family: var(--font);
+}
+.footer_link{
+    display: block;
+    display: flex;
+    justify-content: center;
+}
+.footer_link a{
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    padding: 2px 10px;
+    border-radius: 5px;
+    box-shadow:0 0 5px #0004;
+    position: relative;
+    transition: transform 0.2s;
+}
+.footer_link a:hover{
+    transform:scale(1.1)
+}
+.footer_link a:active{
+    transform:scale(0.8)
 }
 
 
@@ -795,9 +849,10 @@ div.triangle .b{
 /* svg at bottom */
 
 .toTop{
-    height:40px;
-    width:40px;
-    border-radius:50%;
+    height:60px;
+    width:60px;
+    /* border-radius:50px 50px 25px 50px; */
+    border-radius:50px;
     background:rgba(0, 0, 0, 0.4);
     position:fixed;
     bottom:15px;
@@ -808,6 +863,7 @@ div.triangle .b{
     box-shadow:0 0 10px rgba(0,0,0,0.2);
     backdrop-filter:blur(5px);
     cursor:pointer;
+    border: 2px solid white;
     z-index:999;
 }
 .toTopBottom{
