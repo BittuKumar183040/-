@@ -279,13 +279,11 @@ body{
     letter-spacing: 5px;
     font-family: 'Iceland', cursive;
     text-shadow: 0px 0px 2px white;
-    animation: subheading 2s infinite 2s alternate ease-in-out;
 }
-@keyframes subheading {
-    to {
-        opacity: 0.9;
-        text-shadow: 1px 1px 2px white;
-    }
+.subheadline::after{
+    content: "|";
+    color: #f00;
+    font-size: 1.5em;
 }
 /* Bottom section of home page */
 .botSection{
@@ -461,14 +459,6 @@ body{
 .aboutLeft div:first-child p::first-letter{
     font-size: 2em;
 
-}
-.aboutLeft div:first-child p::first-letter::after{
-    position: absolute;
-    top: 5px;
-    left: 0px;
-    height: 10px;
-    width: 100%;
-    background-color: white;
 }
 .aboutRight{
     display: flex;

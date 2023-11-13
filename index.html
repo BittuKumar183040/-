@@ -5,18 +5,41 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1, maximum-scale=1"/>
     <link rel = "icon" href = "./Extras/logo.png" type = "image/x-icon"/>
+    <link rel="stylesheet" href="loader.css"/>
+    <script src="loader.js" defer></script>
     <link rel="stylesheet" href="animate.min.css" />
     <link rel="stylesheet" href="style.css"/>
     <link rel="stylesheet" href="tabScreen.css"/>
     <link rel="stylesheet" href="mobileScreen.css"/>
-    <link rel="stylesheet" href="loader.css"/>
     <script src="script.js" defer></script>
+    <script type="module" src="model.js" defer></script>
 </head>
 
 
 <body class="indexBody">
-    <script src="loader.js"></script>
-    <div id="loader" class="center"></div>
+    <div class="loader">
+        <div id="loaderT1"></div>
+        <div id="loaderT2"></div>
+        <div class="innerLoader">
+            <div class="inner1">
+                <svg width="149" height="149" viewBox="0 0 149 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_1_11" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="149" height="149">
+                    <circle cx="74.5" cy="74.5" r="74.5" fill="white"/>
+                    </mask>
+                    <g mask="url(#mask0_1_11)" class="loader_test">
+                        <circle cx="74.5" cy="74.5" r="72.5" stroke="white" stroke-width="4"/>
+                        <circle cx="75" cy="-58" r="80" fill="white"/>
+                        <path id="loader_dip" d="M78.1458 -34.6457C76.7289 -37.7848 72.2711 -37.7848 70.8542 -34.6456L58.896 -8.1533C57.6836 -5.77256 57 -3.0774 57 -0.222603C57 9.44238 64.835 17.2774 74.5 17.2774C84.165 17.2774 92 9.44238 92 -0.222603C92 -3.0774 91.3164 -5.77256 90.104 -8.1533L78.1458 -34.6457Z" fill="white"/>
+                    </g>
+                </svg>
+                <div class="cpu"></div>
+            </div>
+            <div class="inner2">
+                <div class="keyboard"></div>
+                <div class="mouse"></div>
+            </div>
+        </div>
+    </div>
     <div class="logoBack">
         <marquee id="logoBack">welcome</marquee> 
         <!-- <marquee id="logoBack">2welcome</marquee>  -->
@@ -53,6 +76,9 @@
             </a>
         </div>
     </nav>
+<section class="canvasSection">
+
+</section>
 <section class="mainFrame">
     <section class="heroSection">
         <div class="headline">
@@ -88,7 +114,7 @@
                 <p class="bounce">.</p>
             </div>
     
-            <p class="subheadline">Front End Developer / 3D Modelling</p>
+            <p class="subheadline"></p>
             <div class="contact">
                 <p class="contactBtn">Contact Me</p>
             </div>
@@ -285,7 +311,6 @@
         </div>
     </section>
 </section>
-
 
 <!-- extra objects -->
 

@@ -1,0 +1,27 @@
+{
+  "name": "-",
+  "version": "1.0.0",
+  "description": "This is a live page of my portfolio\r Check out at - http://bittukumar183040.github.io/-/",
+  "engines": {
+    "parcel":"2.x"
+  },
+  "scripts": {
+    "start": "parcel ./*.html",
+    "build": "parcel build ./*.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Portfolio",
+    "Bittu Kumar"
+  ],
+  "author": "Bittu Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.1",
+    "parcel": "^2.10.2",
+    "three": "^0.158.0"
+  },
+  "devDependencies": {
+    "@parcel/reporter-bundle-analyzer": "^2.10.2"
+  }
+}
