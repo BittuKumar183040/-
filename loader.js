@@ -1,11 +1,10 @@
-document.onreadystatechange = function() {
-    if (document.readyState !== "complete") 
+const loader=document.querySelector(".loader")
+document.onreadystatechange = function(e) {
+    console.log(e)
+    scrollTo({top:0, behavior:"smooth"})
+    loader.style.position="relative"
+    if (document.readyState === "complete") 
     {
-        document.querySelector("body").style.visibility = "hidden";
-        document.querySelector("#loader").style.visibility = "visible";
-    } 
-    else {
-        document.querySelector("#loader").style.display = "none";
-        document.querySelector("body").style.visibility = "visible";
+        loader.classList.add("loaderDone")
     }
 };

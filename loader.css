@@ -1,23 +1,176 @@
-#loader {
-    border: 10px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 12px solid #444444;
-    width: 70px;
-    height: 70px;
-    animation: spin 1s linear infinite;
+.loader{
+    background-color: rgb(201, 201, 201);
+    position: fixed;
+    z-index: 999;
+    height: 100dvh;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    transform-origin: center;
+    align-items: center;
+    overflow: hidden;
 }
-  
-@keyframes spin {
-    100% {
-        transform: rotate(360deg);
+.loaderDone{
+    animation: loaderDone 1s 1 forwards ease-in-out;
+}
+@keyframes loaderDone {
+    from{
+        height: 100dvh;
+        transform: scale(1);
+    }
+    to{
+        height: 0px;
+        transform: scale(5);
     }
 }
-.center {
+
+#loaderT1{
     position: absolute;
-    top: 0;
-    bottom: 0;
+    z-index: -1;
     left: 0;
+    width: 0;
+	height: 0;
+	border-top: 25dvh solid transparent;
+	border-left: 50dvw solid #ffffff;
+	border-bottom: 25dvh solid transparent;
+}
+
+#loaderT2{
+    position: absolute;
+    z-index: -1;
     right: 0;
-    margin: auto;
-    z-index: 10;
+    height: 100%;
+    width: 0;
+	height: 0;
+	border-top: 25dvh solid transparent;
+	border-right: 50dvw solid #ffffff;
+	border-bottom: 25dvh solid transparent;
+}
+.innerLoader{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.innerLoader svg{
+    background-color: rgb(155, 153, 153);
+    border-radius: 2px;
+    border:5px solid rgb(28, 28, 28);
+    padding: 10px;
+    width: 220px;
+    display: flex;
+}
+#loader_dip{
+    animation: drop 1s infinite ease-in-out;
+    transform: translateY(0px);
+}
+
+@keyframes drop {
+    to{
+        transform: translateY(250px);
+    }
+}
+
+.inner1{
+    display: flex;
+    gap: 15px;
+    align-items: end;
+    margin-left: 40px;
+}
+.cpu{
+    background-color: rgba(34, 34, 34,0.99);
+    height: 200px;
+    width: 80px;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 
+        1px -1px 1px rgb(28, 28, 28),
+        2px -2px 1px rgb(28, 28, 28),
+        3px -3px 1px rgb(28, 28, 28),
+        4px -4px 1px rgb(28, 28, 28),
+        5px -5px 1px rgb(28, 28, 28),
+        5px -5px 1px rgb(28, 28, 28),
+        7px -7px 1px rgb(28, 28, 28),
+        8px -8px 1px rgb(28, 28, 28),
+        9px -9px 1px rgb(28, 28, 28),
+        10px -10px 1px rgb(28, 28, 28),
+        20px 0px 20px rgba(2, 2, 2, 0.4)
+    ;
+    background: radial-gradient(ellipse at left, #2f2f2f, rgb(0, 0, 0)),
+    radial-gradient(ellipse at right, #333333, transparent);
+    transform: scale(1.05);
+}
+.cpu::after{
+    content: "(⌐■_■)";
+    position: absolute;
+    text-align: center;
+    top:10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(181, 173, 173);
+    border: 1px solid rgb(67, 62, 62);
+    border-radius: 5px;
+    height: 20px;
+    width: 80%;
+}
+.cpu::before{
+    content: "___|____|___";
+    color: rgb(67, 62, 62);
+    position: absolute;
+    top:38px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid rgb(67, 62, 62);
+    border-radius: 5px;
+    height: 20px;
+    width: 80%;
+}
+
+.inner2{
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    perspective: 100px;
+    perspective-origin: right;  
+}
+.keyboard, .mouse{
+    transform-style: preserve-3d;
+    transform: rotateX(10deg);
+    box-shadow: 10px 0px 20px rgba(2, 2, 2, 0.4)
+}
+.keyboard{
+    background-color: rgb(15, 15, 15);
+    height: 50px;
+    width: 250px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background: radial-gradient(ellipse at top, #2f2f2f, rgb(0, 0, 0)),
+    radial-gradient(ellipse at bottom, #333333, transparent);
+}
+.keyboard::after{
+    content: " ___ _____________________________________";
+    color:rgba(67, 62, 62, 0.463) ;
+    
+}
+.mouse{
+    background-color: rgb(10, 9, 9);
+    height: 50px;
+    width: 30px;
+    margin-top: 10px;
+    border-radius: 20px;
+    position: relative;
+    background: radial-gradient(ellipse at top, #2f2f2f, rgb(0, 0, 0)),
+            radial-gradient(ellipse at bottom, #333333, transparent);
+}
+.mouse::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top:10px;
+    background-color: rgb(67, 62, 62);
+    height: 20px;width: 2px;
 }

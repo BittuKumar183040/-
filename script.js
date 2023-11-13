@@ -1,14 +1,44 @@
 let ani = document.querySelectorAll('.bounce');
+let subHeading = document.querySelector('.subheadline');
 // const backgroundReact=document.querySelector('body');
 
 let aniAct='animate__animated';
 let aniIntrence='animate__jackInTheBox'
 let aniIntrenceSpeed='animate__slow';
 
+
+function TypingEffect(str, DOMElement){
+    let textArray=str.split("");
+    let i=0;
+    let text=""
+    const closeText=(eInt)=>{
+        text=text.substring(0,text.length-1)
+        DOMElement.innerHTML=text
+        if(text.length<1){
+            text="";
+            i=0;
+            startText()
+            clearInterval(eInt)
+        }
+    }
+    const addText=(sInt)=>{
+        text=text+textArray[i++]
+        DOMElement.innerHTML=text
+        if(i==textArray.length){
+            clearInterval(sInt)
+            endText();
+        }
+    }
+    const endText=()=>{var eInt=setInterval(()=>closeText(eInt),50)}
+    const startText=()=>{var sInt=setInterval(()=>addText(sInt),150)}
+    startText()
+}
+TypingEffect("Front End Developer / 3D Modelling", subHeading)
+
 const startingAni=(i)=>{
     setInterval(function(){
         ani[i].style.visibility='visible';
-    },130*i);   
+    },130*i);
 }
 const textAni = () =>{
     for (let i = 0; i < ani.length; i++) {
@@ -55,10 +85,6 @@ window.addEventListener("scroll",()=>{
     scrollElement.style.width=(Math.ceil(scrollY/scrollable*100))+"%";
 })
 
-
-const contact = () =>{
-    console.log("hallo");
-}
 
 // tab version menu icon color change
 // const menuIcons=document.getElementsByTagName('svg');
